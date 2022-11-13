@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9632e7e0776e40c797abe4b5607ddbc8" Name="Diagram1">
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Cash" Width="1.5" PointX="7.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.CatogaryDetail" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Catogary" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.EmpAttendance" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.EmpLeaf" Width="1.5" PointX="11.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Employe" Width="1.5" PointX="12.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.ExamResult" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Exam" Width="1.5" PointX="2.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Expense" Width="1.5" PointX="12" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.ExpenseType" Width="1.5" PointX="9.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Job" Width="1.5" PointX="4.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.NewRegistration" Width="1.5" PointX="6.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.OPenningValue" Width="1.5" PointX="8.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.OperationsLog" Width="1.5" PointX="10" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Page" Width="1.5" PointX="7.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.PayCatExpnce" Width="1.5" PointX="13.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Section" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Stage" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.StudentAttendance" Width="1.5" PointX="10.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.StudentCat" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.StudentLeaf" Width="1.5" PointX="14.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.StudentPaye" Width="1.5" PointX="14.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.StudentPaysNew" Width="1.5" PointX="12.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.StudentReturn" Width="1.5" PointX="14.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Student" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.Subject" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.UserPermission" Width="1.5" PointX="10" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMRCodeneWV2Model.User" Width="1.5" PointX="7.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_CatogaryDetails_Catogarys" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_Catogarys_Subjects" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_StudentCats_Catogarys" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_Expense_ExpenseType" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_OperationsLog_Users1" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_UserPermission_Pages" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_Sections_Stages" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_Students_Sections" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_Students_Stages" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_StudentCats_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMRCodeneWV2Model.FK_UserPermission_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

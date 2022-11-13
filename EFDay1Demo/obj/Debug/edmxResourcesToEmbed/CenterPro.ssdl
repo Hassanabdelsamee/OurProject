@@ -1,0 +1,1266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMRCodeneWV2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cash">
+    <Key>
+      <PropertyRef Name="Cash_ID" />
+    </Key>
+    <Property Name="Cash_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cash_Name" Type="nvarchar(max)" />
+    <Property Name="Cash_CurrentValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Cash_AccountID" Type="int" />
+    <Property Name="Cash_UserID" Type="int" />
+    <Property Name="Cash_DeleteStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="CatogaryDetails">
+    <Key>
+      <PropertyRef Name="CatogaryDetails_ID" />
+    </Key>
+    <Property Name="CatogaryDetails_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CatogaryDetails_CatogeryID" Type="int" />
+    <Property Name="CatogaryDetails_Day" Type="nvarchar" MaxLength="50" />
+    <Property Name="CatogaryDetails_Time" Type="nvarchar" MaxLength="50" />
+    <Property Name="CatogaryDetails_date" Type="datetime2" Precision="7" />
+    <Property Name="CatogaryDetails_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Catogarys">
+    <Key>
+      <PropertyRef Name="Catogary_ID" />
+    </Key>
+    <Property Name="Catogary_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Catogary_Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Catogary_StageID" Type="int" />
+    <Property Name="Catogary_SectionID" Type="int" />
+    <Property Name="Catogary_Cost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Catogary_SubjectID" Type="int" />
+    <Property Name="Catogary_Empid" Type="int" />
+    <Property Name="Catogary_DOC" Type="datetime2" Precision="7" />
+    <Property Name="Catogary_Deletestatus" Type="bit" />
+    <Property Name="Catogary_PayedWays" Type="bit" />
+  </EntityType>
+  <EntityType Name="EmpAttendance">
+    <Key>
+      <PropertyRef Name="EmpAttend_ID" />
+    </Key>
+    <Property Name="EmpAttend_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpAttend_Date" Type="datetime2" Precision="7" />
+    <Property Name="EmpAttend_EmpID" Type="int" />
+    <Property Name="EmpAttend_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="EmpLeaves">
+    <Key>
+      <PropertyRef Name="EmpLeave_ID" />
+    </Key>
+    <Property Name="EmpLeave_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpLeave_Date" Type="datetime2" Precision="7" />
+    <Property Name="EmpLeave_EmpId" Type="int" />
+    <Property Name="EmpLeave_DeleteStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Employes">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee_Name" Type="nvarchar(max)" />
+    <Property Name="Employee_IPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Employee_Issn" Type="nvarchar" MaxLength="50" />
+    <Property Name="Employee_IAddress" Type="nvarchar(max)" />
+    <Property Name="Employee_IUser_ID" Type="int" />
+    <Property Name="Employee_IJob_ID" Type="int" />
+    <Property Name="Employee_salary" Type="nvarchar(max)" />
+    <Property Name="DeleteStatus" Type="bit" />
+    <Property Name="Employee_UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="ExamResults">
+    <Key>
+      <PropertyRef Name="ExamResult_ID" />
+    </Key>
+    <Property Name="ExamResult_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExamResult_StuID" Type="int" />
+    <Property Name="ExamResult_Examid" Type="int" />
+    <Property Name="ExamResult_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExamResult_degree" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ExamResult_date" Type="datetime2" Precision="7" />
+    <Property Name="ExamResult_deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Exams">
+    <Key>
+      <PropertyRef Name="Exams_ID" />
+    </Key>
+    <Property Name="Exams_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Exams_Name" Type="nvarchar(max)" />
+    <Property Name="Exams_highdegree" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Exams_Lowdegree" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Exams_deleteStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="Expense_ID" />
+    </Key>
+    <Property Name="Expense_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Expense_ExpenseTypeID" Type="int" />
+    <Property Name="Expense_Date" Type="datetime2" Precision="7" />
+    <Property Name="Expense_Name" Type="nvarchar(max)" />
+    <Property Name="Expense_Value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Expense_Details" Type="nvarchar(max)" />
+    <Property Name="Expense_WarehouseID" Type="int" />
+    <Property Name="Expense_UserID" Type="int" />
+    <Property Name="Expense_DeleteStatus" Type="bit" />
+    <Property Name="Expense_CashID" Type="int" />
+    <Property Name="Expense_BankID" Type="int" />
+    <Property Name="Expense_CheckNum" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="ExpenseType_ID" />
+    </Key>
+    <Property Name="ExpenseType_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExpenseType_Name" Type="nvarchar(max)" />
+    <Property Name="ExpenseType_DeleteStatus" Type="bit" />
+    <Property Name="ExpenseType_UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Job_ID" />
+    </Key>
+    <Property Name="Job_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Job_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="powers" Type="nvarchar(max)" />
+    <Property Name="Job_DeleteStatus" Type="bit" Nullable="false" />
+    <Property Name="Job_UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="NewRegistrations">
+    <Key>
+      <PropertyRef Name="NewRegistration_ID" />
+    </Key>
+    <Property Name="NewRegistration_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewRegistration_Date" Type="datetime2" Precision="7" />
+    <Property Name="NewRegistration_StuID" Type="int" />
+    <Property Name="NewRegistration_Totalvalue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Netvalue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Paidvalue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Remaining" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_CashID" Type="int" />
+    <Property Name="NewRegistration_DeleteStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="OPenningValues">
+    <Key>
+      <PropertyRef Name="OPenningValues_ID" />
+    </Key>
+    <Property Name="OPenningValues_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OPenningValues_AccountID" Type="int" />
+    <Property Name="OPenningValues_Code" Type="nvarchar" MaxLength="50" />
+    <Property Name="OPenningValues_Debit" Type="bit" />
+    <Property Name="OPenningValues_Credit" Type="bit" />
+    <Property Name="OPenningValues_value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OPenningValues_Date" Type="datetime2" Precision="7" />
+    <Property Name="OPenningValues_DeleteStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="OperationsLog">
+    <Key>
+      <PropertyRef Name="OperationLog_ID" />
+    </Key>
+    <Property Name="OperationLog_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OperationLog_Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OperationLog_User_ID" Type="int" />
+    <Property Name="OperationLog_Date" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="OperationLog_TransactionTypeID" Type="int" />
+  </EntityType>
+  <EntityType Name="Pages">
+    <Key>
+      <PropertyRef Name="Page_ID" />
+    </Key>
+    <Property Name="Page_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageName" Type="nvarchar(max)" />
+    <Property Name="DeleteStatus" Type="bit" />
+    <Property Name="ImageName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PayCatExpnces">
+    <Key>
+      <PropertyRef Name="PayCatExpnces_ID" />
+    </Key>
+    <Property Name="PayCatExpnces_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PayCatExpnces_StuID" Type="int" />
+    <Property Name="PayCatExpnces_CatID" Type="int" />
+    <Property Name="PayCatExpnces_Discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PayCatExpnces_Value" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PayCatExpnces_NetValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PayCatExpnces_Nots" Type="nvarchar" MaxLength="50" />
+    <Property Name="PayCatExpnces_CashID" Type="int" />
+    <Property Name="PayCatExpnces_DOP" Type="datetime2" Precision="7" />
+    <Property Name="PayCatExpnces_DeleteStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Sections">
+    <Key>
+      <PropertyRef Name="Section_ID" />
+    </Key>
+    <Property Name="Section_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Section_StageID" Type="int" />
+    <Property Name="Section_Name" Type="nvarchar(max)" />
+    <Property Name="Section_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Stages">
+    <Key>
+      <PropertyRef Name="Stage_ID" />
+    </Key>
+    <Property Name="Stage_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Stage_Name" Type="nvarchar(max)" />
+    <Property Name="Stage_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentAttendance">
+    <Key>
+      <PropertyRef Name="StudentAttend_ID" />
+    </Key>
+    <Property Name="StudentAttend_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentAttend_Date" Type="datetime2" Precision="7" />
+    <Property Name="StudentAttend_StuID" Type="int" />
+    <Property Name="StudentAttend_CatID" Type="int" />
+    <Property Name="StudentAttend_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="StudentAttend_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentCats">
+    <Key>
+      <PropertyRef Name="StudentCat_ID" />
+    </Key>
+    <Property Name="StudentCat_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentCat_StuID" Type="int" />
+    <Property Name="StudentCat_CatID" Type="int" />
+    <Property Name="StudentCat_date" Type="datetime2" Precision="7" />
+    <Property Name="StudentCat_deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentLeaves">
+    <Key>
+      <PropertyRef Name="StudentLeave_ID" />
+    </Key>
+    <Property Name="StudentLeave_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentLeave_date" Type="datetime2" Precision="7" />
+    <Property Name="StudentLeave_StuID" Type="int" />
+    <Property Name="StudentLeave_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentPayes">
+    <Key>
+      <PropertyRef Name="StudentPayes_ID" />
+    </Key>
+    <Property Name="StudentPayes_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPayes_StuID" Type="int" />
+    <Property Name="StudentPayes_CatID" Type="int" />
+    <Property Name="StudentPayes_Date" Type="datetime2" Precision="7" />
+    <Property Name="StudentPayes_Totalvalue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPayes_CatCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPayes_NotesEXp" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPayes_Netvalue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StudentPayes_PayStuType" Type="int" />
+    <Property Name="StudentPayes_PaysType" Type="nvarchar" MaxLength="50" />
+    <Property Name="StudentPayes_CashID" Type="int" />
+    <Property Name="StudentPayes_Detestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentPaysNew">
+    <Key>
+      <PropertyRef Name="StudentPay_ID" />
+    </Key>
+    <Property Name="StudentPay_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentPay_catid" Type="int" />
+    <Property Name="StudentPay_stuid" Type="int" />
+    <Property Name="StudentPay_Date" Type="datetime2" Precision="7" />
+    <Property Name="StudentPay_PayStatus" Type="nvarchar" MaxLength="50" />
+    <Property Name="StudentPay_catcost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_discount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_notesscost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_Netvalue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_Paid" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_Remaining" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_cashid" Type="int" />
+    <Property Name="StudentPay_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="StudentReturns">
+    <Key>
+      <PropertyRef Name="StudentReturn_ID" />
+    </Key>
+    <Property Name="StudentReturn_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentReturn_Date" Type="datetime2" Precision="7" />
+    <Property Name="StudentReturn_StuID" Type="int" />
+    <Property Name="StudentReturn_CashID" Type="int" />
+    <Property Name="StudentReturn_Remaining" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="StudentReturn_Satus" Type="bit" />
+    <Property Name="StudentReturn_DeletStaus" Type="bit" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Student_StageID" Type="int" />
+    <Property Name="Student_SectionID" Type="int" />
+    <Property Name="Student_Name" Type="nvarchar(max)" />
+    <Property Name="Student_Address" Type="nvarchar(max)" />
+    <Property Name="Student_School" Type="nvarchar(max)" />
+    <Property Name="Student_Phone1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_Phone2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_Notes" Type="nvarchar(max)" />
+    <Property Name="Student_DeleteStatus" Type="bit" />
+    <Property Name="Student_Barcode" Type="nvarchar(max)" />
+    <Property Name="Student_CatID" Type="int" />
+    <Property Name="Student_Payedstatus" Type="int" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subject_Notes" Type="nvarchar(max)" />
+    <Property Name="Subject_Deletestatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserPermission">
+    <Key>
+      <PropertyRef Name="UserPage_ID" />
+    </Key>
+    <Property Name="UserPage_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="Page_ID" Type="int" Nullable="false" />
+    <Property Name="UserPage_USerID" Type="int" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeleteStatus" Type="bit" Nullable="false" />
+    <Property Name="UserIDD" Type="int" />
+  </EntityType>
+  <Association Name="FK_CatogaryDetails_Catogarys">
+    <End Role="Catogarys" Type="Self.Catogarys" Multiplicity="0..1" />
+    <End Role="CatogaryDetails" Type="Self.CatogaryDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catogarys">
+        <PropertyRef Name="Catogary_ID" />
+      </Principal>
+      <Dependent Role="CatogaryDetails">
+        <PropertyRef Name="CatogaryDetails_CatogeryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Catogarys_Subjects">
+    <End Role="Subjects" Type="Self.Subjects" Multiplicity="0..1" />
+    <End Role="Catogarys" Type="Self.Catogarys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="Catogarys">
+        <PropertyRef Name="Catogary_SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_ExpenseType">
+    <End Role="ExpenseType" Type="Self.ExpenseType" Multiplicity="0..1" />
+    <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExpenseType">
+        <PropertyRef Name="ExpenseType_ID" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="Expense_ExpenseTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationsLog_Users1">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="OperationsLog" Type="Self.OperationsLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="OperationsLog">
+        <PropertyRef Name="OperationLog_User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sections_Stages">
+    <End Role="Stages" Type="Self.Stages" Multiplicity="0..1" />
+    <End Role="Sections" Type="Self.Sections" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="Stage_ID" />
+      </Principal>
+      <Dependent Role="Sections">
+        <PropertyRef Name="Section_StageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCats_Catogarys">
+    <End Role="Catogarys" Type="Self.Catogarys" Multiplicity="0..1" />
+    <End Role="StudentCats" Type="Self.StudentCats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catogarys">
+        <PropertyRef Name="Catogary_ID" />
+      </Principal>
+      <Dependent Role="StudentCats">
+        <PropertyRef Name="StudentCat_CatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCats_Students">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="StudentCats" Type="Self.StudentCats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="StudentCats">
+        <PropertyRef Name="StudentCat_StuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Sections">
+    <End Role="Stages" Type="Self.Stages" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="Stage_ID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Student_StageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Stages">
+    <End Role="Stages" Type="Self.Stages" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="Stage_ID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Student_StageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPermission_Pages">
+    <End Role="Pages" Type="Self.Pages" Multiplicity="1" />
+    <End Role="UserPermission" Type="Self.UserPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pages">
+        <PropertyRef Name="Page_ID" />
+      </Principal>
+      <Dependent Role="UserPermission">
+        <PropertyRef Name="Page_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPermission_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UserPermission" Type="Self.UserPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="UserPermission">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Add_Empatendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Add_EmpLeave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Add_Studentatendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Add_StudentatendanceBybarcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="status" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="AddAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="addCatogaryDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="day" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+    <Parameter Name="datee" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="addCatogaryDetailsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="day" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+    <Parameter Name="datee" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="addcatogeries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="stageid" Type="int" Mode="In" />
+    <Parameter Name="sectionid" Type="int" Mode="In" />
+    <Parameter Name="cost" Type="decimal" Mode="In" />
+    <Parameter Name="subid" Type="int" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+    <Parameter Name="payedway" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ADDEmpAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ADDEmpLEave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AddEmpolyee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="ssn" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="job_id" Type="int" Mode="In" />
+    <Parameter Name="salary" Type="decimal" Mode="In" />
+    <Parameter Name="user_id2" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AddExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="high" Type="decimal" Mode="In" />
+    <Parameter Name="low" Type="decimal" Mode="In" />
+  </Function>
+  <Function Name="AddExamResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stuid" Type="int" Mode="In" />
+    <Parameter Name="examid" Type="int" Mode="In" />
+    <Parameter Name="degree" Type="decimal" Mode="In" />
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="addPerUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="int" Mode="In" />
+    <Parameter Name="pageid" Type="int" Mode="In" />
+    <Parameter Name="User_ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ADDRRegistration" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+    <Parameter Name="totalvalue" Type="decimal" Mode="In" />
+    <Parameter Name="Discount" Type="decimal" Mode="In" />
+    <Parameter Name="Netvalue" Type="decimal" Mode="In" />
+    <Parameter Name="paid" Type="decimal" Mode="In" />
+    <Parameter Name="remaining" Type="decimal" Mode="In" />
+    <Parameter Name="cashid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AddSection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="satageid" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="AddStages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ADDStuAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AddStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="satageid" Type="int" Mode="In" />
+    <Parameter Name="sectionid" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="school" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="barcode" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AddStudentBycode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="satageid" Type="int" Mode="In" />
+    <Parameter Name="sectionid" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="school" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="barcode" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="addstudentcat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stuid" Type="int" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ADDStudentLEave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ADDStudentPayes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stuid" Type="int" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="totalvalue" Type="decimal" Mode="In" />
+    <Parameter Name="cost" Type="decimal" Mode="In" />
+    <Parameter Name="NotesEXp" Type="decimal" Mode="In" />
+    <Parameter Name="Netvalue" Type="decimal" Mode="In" />
+    <Parameter Name="PayStuType" Type="int" Mode="In" />
+    <Parameter Name="PaysType" Type="nvarchar" Mode="In" />
+    <Parameter Name="cashid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AddStudentPaysNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Paystatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="catcost" Type="decimal" Mode="In" />
+    <Parameter Name="discount" Type="decimal" Mode="In" />
+    <Parameter Name="notecost" Type="decimal" Mode="In" />
+    <Parameter Name="Netvalue" Type="decimal" Mode="In" />
+    <Parameter Name="paid" Type="decimal" Mode="In" />
+    <Parameter Name="Remaining" Type="decimal" Mode="In" />
+    <Parameter Name="cashid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ADDStudentReturn" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="stuID" Type="int" Mode="In" />
+    <Parameter Name="cashID" Type="int" Mode="In" />
+    <Parameter Name="Remaining" Type="decimal" Mode="In" />
+    <Parameter Name="satus" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ADDUSER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="pasword" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserIDD" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="AllUsersNeew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="checkattendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="studid" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="checkCash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkcatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkIfEmpIsAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="emp_id" Type="int" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="checkIfEmpIsLeave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="emp_id" Type="int" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="CheckIfExamExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CheckIfSectionExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="CheckIfStageExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="checkIfStudentIsAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Stu_ID" Type="int" Mode="In" />
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkIfStudentIsAttendanceBybarcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
+  </Function>
+  <Function Name="CheckIfSubjectExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="checkJop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkSection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkstage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="checkSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="countstudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Deletecatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="deleteemp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteEmpolyee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="user_id2" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteeStages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="deleteExamResults" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteForUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteForUpdateNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeletePerUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="page_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteSection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DisplayEmpolyees" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DisplayJobs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ExamResult" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetAllOperation" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GETcahFromCurrentvalue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cashid" Type="int" Mode="In" />
+    <Parameter Name="warehouseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCatbystudentid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCatcost" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getCatogaryDetailsByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetCatogeryDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetCatogeryDataForComboboxbybarcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetCatogeryDataForComboboxs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetEmployeeyDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetExamDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetPageID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="str" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetPaySatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetPaySatusbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getsectionbybarcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetSectionDataBystageid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetSectionDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetSectionidDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="secid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetSpisficCatogeryDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stageid" Type="int" Mode="In" />
+    <Parameter Name="secid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getstagebybarcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetStagesDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetStagesidDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stageid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getstudentbybarcode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="getstudentbyCatid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stageid" Type="int" Mode="In" />
+    <Parameter Name="secid" Type="int" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getstudentbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetstudentDataBycat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetStudentFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="Studid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getstudentforcombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stageid" Type="int" Mode="In" />
+    <Parameter Name="secid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetSubjectforcombox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetTeacherforcombox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="IB_GetCashDataForCombobox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="insert_PayCatExpnces" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stuid" Type="int" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="discount" Type="decimal" Mode="In" />
+    <Parameter Name="value" Type="decimal" Mode="In" />
+    <Parameter Name="Netvalue" Type="decimal" Mode="In" />
+    <Parameter Name="nots" Type="nvarchar" Mode="In" />
+    <Parameter Name="cashid" Type="int" Mode="In" />
+    <Parameter Name="DOP" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="insertEmplLeave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="Empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insertStudentAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="studid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insertStudentLeaves" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime2" Mode="In" />
+    <Parameter Name="studid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="insertSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="nots" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="LastInsertUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MAproc_CheckIfExpenseTypeExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="MAproc_DeleteExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExpenseID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_DeleteExpenseType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_InsertExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExpenseTypeID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="datetime2" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Value" Type="decimal" Mode="In" />
+    <Parameter Name="Details" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CashID" Type="int" Mode="In" />
+    <Parameter Name="BankID" Type="int" Mode="In" />
+    <Parameter Name="CheckNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_InsertExpenseType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_InsertOperationLog" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DescriptionLog" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TransactionTypeID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_SelectAllExpenseType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MAproc_SelectExpenseType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MAproc_SelectExpenseTypeByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_SelectExpenseTypeByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="MAproc_SeleteAllExpenses" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MAproc_SeleteExpenseByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExpenseID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_UpdateExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ExpenseID" Type="int" Mode="In" />
+    <Parameter Name="ExpenseTypeID" Type="int" Mode="In" />
+    <Parameter Name="Date" Type="datetime2" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Value" Type="decimal" Mode="In" />
+    <Parameter Name="Details" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="CashID" Type="int" Mode="In" />
+    <Parameter Name="BankID" Type="int" Mode="In" />
+    <Parameter Name="CheckNum" Type="nvarchar" Mode="In" />
+    <Parameter Name="WarehouseID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MAproc_UpdateExpenseType" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID" Type="int" Mode="In" />
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PrintbarcodeForCatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PrintStudentForCatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Report_Attendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="Report_AttendanceByCatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Report_AttendanceByStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ReportExpense" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromdate" Type="datetime" Mode="In" />
+    <Parameter Name="todate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ReportPayeed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="ReportStuFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RPT_ReportStuFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_AddCashData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cashName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="openingvalue" Type="decimal" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_AddJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Job_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_CheckIfCashNameExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cashName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Sa_CheckIfJobNameExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sa_CheckIfStageExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Sa_CheckIfUpdateCashNameExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cashName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_CheckIfUpdateJobExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobName" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_CheckIfUpdateUserExist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_DeleteCashData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_DeleteJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_EditJobName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="jobName" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Sa_GetCashData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Sa_GetJobs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sa_Login_Proc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userName" Type="nvarchar" Mode="In" />
+    <Parameter Name="pass" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sa_SearchCash" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Sa_SearchJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sa_SearchUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sa_ShowAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Sa_UpdateCashData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="cashName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="openingvalue" Type="decimal" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SearchExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="searchResult" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="Searchstage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="searchStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SearchSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="word" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="select_Employee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="selectAttendance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+  </Function>
+  <Function Name="selectAttendEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="date" Mode="In" />
+    <Parameter Name="dateto" Type="date" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="selectcatByStuid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="selectcatfprcombox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="stageid" Type="int" Mode="In" />
+    <Parameter Name="secid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SelectDateOfCat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="selectEmpForCombox" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="selectLeaveEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="date" Mode="In" />
+    <Parameter Name="dateto" Type="date" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="selectNotPaydBycat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SelectStudentReportAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FromDate" Type="datetime2" Mode="In" />
+    <Parameter Name="ToDate" Type="datetime2" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="ID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ShowAbcenseStude" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ShowAbcenseStudeForStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ShowAbcenseStudeForStudentt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="stuid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ShowAttendanceByCatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="datefrom" Type="datetime2" Mode="In" />
+    <Parameter Name="dateto" Type="datetime2" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="showcatogery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="showcatogerystudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="showExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ShowNotAttendStude" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="date" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ShowSection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="showSections" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="showStages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ShowStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="showSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateCatogaryDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="day" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+    <Parameter Name="datee" Type="datetime2" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateCatogaryDetailsNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="day" Type="nvarchar" Mode="In" />
+    <Parameter Name="time" Type="nvarchar" Mode="In" />
+    <Parameter Name="datee" Type="datetime2" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Updatecatogeries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="stageid" Type="int" Mode="In" />
+    <Parameter Name="sectionid" Type="int" Mode="In" />
+    <Parameter Name="cost" Type="decimal" Mode="In" />
+    <Parameter Name="subid" Type="int" Mode="In" />
+    <Parameter Name="empid" Type="int" Mode="In" />
+    <Parameter Name="payedway" Type="int" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateEmpolyee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="ssn" Type="nvarchar" Mode="In" />
+    <Parameter Name="address" Type="nvarchar" Mode="In" />
+    <Parameter Name="job_id" Type="int" Mode="In" />
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="Empolyee_id" Type="int" Mode="In" />
+    <Parameter Name="salary" Type="int" Mode="In" />
+    <Parameter Name="user_id2" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateExam" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="high" Type="decimal" Mode="In" />
+    <Parameter Name="low" Type="decimal" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateSection" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="satageid" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="UpdateStages" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="UpdateStudent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="satageid" Type="int" Mode="In" />
+    <Parameter Name="sectionid" Type="int" Mode="In" />
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="school" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Phone1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone2" Type="nvarchar" Mode="In" />
+    <Parameter Name="notes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="barcode" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+    <Parameter Name="status" Type="int" Mode="In" />
+  </Function>
+  <Function Name="updateStudentcat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="studentname" Type="nvarchar" Mode="In" />
+    <Parameter Name="catid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="updatetSubject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="nots" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UPDATEUSER" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="pasword" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VertifyEmpBySSNandName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ssn" Type="nvarchar" Mode="In" />
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VertifyJob" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VertifyPerUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="user_id" Type="int" Mode="In" />
+    <Parameter Name="page_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="VertifyUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="DBMRCodeneWV2ModelStoreContainer">
+    <EntitySet Name="Cash" EntityType="Self.Cash" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CatogaryDetails" EntityType="Self.CatogaryDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Catogarys" EntityType="Self.Catogarys" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpAttendance" EntityType="Self.EmpAttendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmpLeaves" EntityType="Self.EmpLeaves" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employes" EntityType="Self.Employes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExamResults" EntityType="Self.ExamResults" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exams" EntityType="Self.Exams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expense" EntityType="Self.Expense" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExpenseType" EntityType="Self.ExpenseType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewRegistrations" EntityType="Self.NewRegistrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OPenningValues" EntityType="Self.OPenningValues" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OperationsLog" EntityType="Self.OperationsLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pages" EntityType="Self.Pages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PayCatExpnces" EntityType="Self.PayCatExpnces" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sections" EntityType="Self.Sections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stages" EntityType="Self.Stages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentAttendance" EntityType="Self.StudentAttendance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentCats" EntityType="Self.StudentCats" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentLeaves" EntityType="Self.StudentLeaves" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentPayes" EntityType="Self.StudentPayes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentPaysNew" EntityType="Self.StudentPaysNew" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentReturns" EntityType="Self.StudentReturns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subjects" EntityType="Self.Subjects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserPermission" EntityType="Self.UserPermission" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CatogaryDetails_Catogarys" Association="Self.FK_CatogaryDetails_Catogarys">
+      <End Role="Catogarys" EntitySet="Catogarys" />
+      <End Role="CatogaryDetails" EntitySet="CatogaryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Catogarys_Subjects" Association="Self.FK_Catogarys_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Catogarys" EntitySet="Catogarys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_ExpenseType" Association="Self.FK_Expense_ExpenseType">
+      <End Role="ExpenseType" EntitySet="ExpenseType" />
+      <End Role="Expense" EntitySet="Expense" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationsLog_Users1" Association="Self.FK_OperationsLog_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="OperationsLog" EntitySet="OperationsLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sections_Stages" Association="Self.FK_Sections_Stages">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Sections" EntitySet="Sections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCats_Catogarys" Association="Self.FK_StudentCats_Catogarys">
+      <End Role="Catogarys" EntitySet="Catogarys" />
+      <End Role="StudentCats" EntitySet="StudentCats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCats_Students" Association="Self.FK_StudentCats_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentCats" EntitySet="StudentCats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Sections" Association="Self.FK_Students_Sections">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Stages" Association="Self.FK_Students_Stages">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPermission_Pages" Association="Self.FK_UserPermission_Pages">
+      <End Role="Pages" EntitySet="Pages" />
+      <End Role="UserPermission" EntitySet="UserPermission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPermission_Users" Association="Self.FK_UserPermission_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserPermission" EntitySet="UserPermission" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

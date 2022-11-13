@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EE887940-1039-4D06-A6C1-2002D9378146}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EFDay1Demo</RootNamespace>
+    <AssemblyName>EFDay1Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllUsersNeew_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AllUsers_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cash.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Catogary.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CatogaryDetail.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CenterPro.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CenterPro.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CenterPro.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CenterPro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CenterPro.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="checkcatogery_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checkExam_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIfExamExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIfSectionExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIfStageExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIfSubjectExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checkJop_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checkSection_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checkstage_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checkStudent_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="checkSubject_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayEmpolyees_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayJobs_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpAttendance.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpLeaf.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employe.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exam.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExamResult.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExamResult_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Expense.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpenseType.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetAllOperation_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCatbystudentid_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getCatogaryDetailsByID_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCatogeryDataForComboboxbybarcode_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCatogeryDataForComboboxs_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetCatogeryDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetEmployeeyDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetExamDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetPageID_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getsectionbybarcode_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSectionDataBystageid_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSectionDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSectionidDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSpisficCatogeryDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getstagebybarcode_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStagesDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStagesidDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getstudentbybarcode_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getstudentbyCatid_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getstudentbyid_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetstudentDataBycat_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetStudentFile_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getstudentforcombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetSubjectforcombox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetTeacherforcombox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetUsers_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IB_GetCashDataForCombobox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Job.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAproc_SelectAllExpenseType_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAproc_SelectExpenseTypeByID_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAproc_SelectExpenseTypeByName_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAproc_SelectExpenseType_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAproc_SeleteAllExpenses_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAproc_SeleteExpenseByID_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NewRegistration.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OPenningValue.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OperationsLog.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Page.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayCatExpnce.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrintbarcodeForCatogery_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrintStudentForCatogery_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportExpense_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPayeed_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportStuFile_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report_AttendanceByCatogery_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report_AttendanceByStudent_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Attendance_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RPT_ReportStuFile_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_CheckIfCashNameExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_CheckIfJobNameExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_CheckIfStageExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_CheckIfUpdateCashNameExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_CheckIfUpdateJobExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_CheckIfUpdateUserExist_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_GetCashData_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_GetJobs_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sa_Login_Proc_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_SearchCash_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_SearchJob_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_SearchUser_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sa_ShowAllUsers_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchExam_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="searchResult_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Searchstage_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="searchStudent_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSubject_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Section.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectAttendance_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectAttendEmp_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectcatByStuid_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectcatfprcombox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDateOfCat_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectEmpForCombox_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectLeaveEmp_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="selectNotPaydBycat_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SelectStudentReportAccount_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="select_Employee_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAbcenseStudeForStudentt_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAbcenseStudeForStudent_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAbcenseStude_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAttendanceByCatogery_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="showcatogerystudent_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="showcatogery_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="showExam_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowNotAttendStude_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="showSections_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowSection_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="showStages_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShowStudent_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="showSubject_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Stage.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAttendance.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentCat.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLeaf.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPaye.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentPaysNew.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentReturn.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Subject.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPermission.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VertifyEmpBySSNandName_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VertifyJob_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VertifyPerUser_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VertifyUser_Result.cs">
+      <DependentUpon>CenterPro.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="CenterPro.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CenterPro.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CenterPro.edmx.diagram">
+      <DependentUpon>CenterPro.edmx</DependentUpon>
+    </None>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CenterPro.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CenterPro.edmx</DependentUpon>
+      <LastGenOutput>CenterPro.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="CenterPro.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CenterPro.edmx</DependentUpon>
+      <LastGenOutput>CenterPro.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

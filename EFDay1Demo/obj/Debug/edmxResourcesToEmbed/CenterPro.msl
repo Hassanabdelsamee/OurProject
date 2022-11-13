@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBMRCodeneWV2ModelStoreContainer" CdmEntityContainer="DBMRCodeneWV2Entities">
+    <EntitySetMapping Name="Cashes">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Cash">
+        <MappingFragment StoreEntitySet="Cash">
+          <ScalarProperty Name="Cash_ID" ColumnName="Cash_ID" />
+          <ScalarProperty Name="Cash_Name" ColumnName="Cash_Name" />
+          <ScalarProperty Name="Cash_CurrentValue" ColumnName="Cash_CurrentValue" />
+          <ScalarProperty Name="Cash_AccountID" ColumnName="Cash_AccountID" />
+          <ScalarProperty Name="Cash_UserID" ColumnName="Cash_UserID" />
+          <ScalarProperty Name="Cash_DeleteStatus" ColumnName="Cash_DeleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CatogaryDetails">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.CatogaryDetail">
+        <MappingFragment StoreEntitySet="CatogaryDetails">
+          <ScalarProperty Name="CatogaryDetails_ID" ColumnName="CatogaryDetails_ID" />
+          <ScalarProperty Name="CatogaryDetails_CatogeryID" ColumnName="CatogaryDetails_CatogeryID" />
+          <ScalarProperty Name="CatogaryDetails_Day" ColumnName="CatogaryDetails_Day" />
+          <ScalarProperty Name="CatogaryDetails_Time" ColumnName="CatogaryDetails_Time" />
+          <ScalarProperty Name="CatogaryDetails_date" ColumnName="CatogaryDetails_date" />
+          <ScalarProperty Name="CatogaryDetails_Deletestatus" ColumnName="CatogaryDetails_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catogarys">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Catogary">
+        <MappingFragment StoreEntitySet="Catogarys">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+          <ScalarProperty Name="Catogary_StageID" ColumnName="Catogary_StageID" />
+          <ScalarProperty Name="Catogary_SectionID" ColumnName="Catogary_SectionID" />
+          <ScalarProperty Name="Catogary_Cost" ColumnName="Catogary_Cost" />
+          <ScalarProperty Name="Catogary_SubjectID" ColumnName="Catogary_SubjectID" />
+          <ScalarProperty Name="Catogary_Empid" ColumnName="Catogary_Empid" />
+          <ScalarProperty Name="Catogary_DOC" ColumnName="Catogary_DOC" />
+          <ScalarProperty Name="Catogary_Deletestatus" ColumnName="Catogary_Deletestatus" />
+          <ScalarProperty Name="Catogary_PayedWays" ColumnName="Catogary_PayedWays" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpAttendances">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.EmpAttendance">
+        <MappingFragment StoreEntitySet="EmpAttendance">
+          <ScalarProperty Name="EmpAttend_ID" ColumnName="EmpAttend_ID" />
+          <ScalarProperty Name="EmpAttend_Date" ColumnName="EmpAttend_Date" />
+          <ScalarProperty Name="EmpAttend_EmpID" ColumnName="EmpAttend_EmpID" />
+          <ScalarProperty Name="EmpAttend_Deletestatus" ColumnName="EmpAttend_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpLeaves">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.EmpLeaf">
+        <MappingFragment StoreEntitySet="EmpLeaves">
+          <ScalarProperty Name="EmpLeave_ID" ColumnName="EmpLeave_ID" />
+          <ScalarProperty Name="EmpLeave_Date" ColumnName="EmpLeave_Date" />
+          <ScalarProperty Name="EmpLeave_EmpId" ColumnName="EmpLeave_EmpId" />
+          <ScalarProperty Name="EmpLeave_DeleteStatus" ColumnName="EmpLeave_DeleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employes">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Employe">
+        <MappingFragment StoreEntitySet="Employes">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_IPhone" ColumnName="Employee_IPhone" />
+          <ScalarProperty Name="Employee_Issn" ColumnName="Employee_Issn" />
+          <ScalarProperty Name="Employee_IAddress" ColumnName="Employee_IAddress" />
+          <ScalarProperty Name="Employee_IUser_ID" ColumnName="Employee_IUser_ID" />
+          <ScalarProperty Name="Employee_IJob_ID" ColumnName="Employee_IJob_ID" />
+          <ScalarProperty Name="Employee_salary" ColumnName="Employee_salary" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="Employee_UserID" ColumnName="Employee_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamResults">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.ExamResult">
+        <MappingFragment StoreEntitySet="ExamResults">
+          <ScalarProperty Name="ExamResult_ID" ColumnName="ExamResult_ID" />
+          <ScalarProperty Name="ExamResult_StuID" ColumnName="ExamResult_StuID" />
+          <ScalarProperty Name="ExamResult_Examid" ColumnName="ExamResult_Examid" />
+          <ScalarProperty Name="ExamResult_Status" ColumnName="ExamResult_Status" />
+          <ScalarProperty Name="ExamResult_degree" ColumnName="ExamResult_degree" />
+          <ScalarProperty Name="ExamResult_date" ColumnName="ExamResult_date" />
+          <ScalarProperty Name="ExamResult_deletestatus" ColumnName="ExamResult_deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exams">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Exam">
+        <MappingFragment StoreEntitySet="Exams">
+          <ScalarProperty Name="Exams_ID" ColumnName="Exams_ID" />
+          <ScalarProperty Name="Exams_Name" ColumnName="Exams_Name" />
+          <ScalarProperty Name="Exams_highdegree" ColumnName="Exams_highdegree" />
+          <ScalarProperty Name="Exams_Lowdegree" ColumnName="Exams_Lowdegree" />
+          <ScalarProperty Name="Exams_deleteStatus" ColumnName="Exams_deleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Expense">
+        <MappingFragment StoreEntitySet="Expense">
+          <ScalarProperty Name="Expense_ID" ColumnName="Expense_ID" />
+          <ScalarProperty Name="Expense_ExpenseTypeID" ColumnName="Expense_ExpenseTypeID" />
+          <ScalarProperty Name="Expense_Date" ColumnName="Expense_Date" />
+          <ScalarProperty Name="Expense_Name" ColumnName="Expense_Name" />
+          <ScalarProperty Name="Expense_Value" ColumnName="Expense_Value" />
+          <ScalarProperty Name="Expense_Details" ColumnName="Expense_Details" />
+          <ScalarProperty Name="Expense_WarehouseID" ColumnName="Expense_WarehouseID" />
+          <ScalarProperty Name="Expense_UserID" ColumnName="Expense_UserID" />
+          <ScalarProperty Name="Expense_DeleteStatus" ColumnName="Expense_DeleteStatus" />
+          <ScalarProperty Name="Expense_CashID" ColumnName="Expense_CashID" />
+          <ScalarProperty Name="Expense_BankID" ColumnName="Expense_BankID" />
+          <ScalarProperty Name="Expense_CheckNum" ColumnName="Expense_CheckNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpenseTypes">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.ExpenseType">
+        <MappingFragment StoreEntitySet="ExpenseType">
+          <ScalarProperty Name="ExpenseType_ID" ColumnName="ExpenseType_ID" />
+          <ScalarProperty Name="ExpenseType_Name" ColumnName="ExpenseType_Name" />
+          <ScalarProperty Name="ExpenseType_DeleteStatus" ColumnName="ExpenseType_DeleteStatus" />
+          <ScalarProperty Name="ExpenseType_UserID" ColumnName="ExpenseType_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Job_name" ColumnName="Job_name" />
+          <ScalarProperty Name="powers" ColumnName="powers" />
+          <ScalarProperty Name="Job_DeleteStatus" ColumnName="Job_DeleteStatus" />
+          <ScalarProperty Name="Job_UserID" ColumnName="Job_UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewRegistrations">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.NewRegistration">
+        <MappingFragment StoreEntitySet="NewRegistrations">
+          <ScalarProperty Name="NewRegistration_ID" ColumnName="NewRegistration_ID" />
+          <ScalarProperty Name="NewRegistration_Date" ColumnName="NewRegistration_Date" />
+          <ScalarProperty Name="NewRegistration_StuID" ColumnName="NewRegistration_StuID" />
+          <ScalarProperty Name="NewRegistration_Totalvalue" ColumnName="NewRegistration_Totalvalue" />
+          <ScalarProperty Name="NewRegistration_Discount" ColumnName="NewRegistration_Discount" />
+          <ScalarProperty Name="NewRegistration_Netvalue" ColumnName="NewRegistration_Netvalue" />
+          <ScalarProperty Name="NewRegistration_Paidvalue" ColumnName="NewRegistration_Paidvalue" />
+          <ScalarProperty Name="NewRegistration_Remaining" ColumnName="NewRegistration_Remaining" />
+          <ScalarProperty Name="NewRegistration_CashID" ColumnName="NewRegistration_CashID" />
+          <ScalarProperty Name="NewRegistration_DeleteStatus" ColumnName="NewRegistration_DeleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPenningValues">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.OPenningValue">
+        <MappingFragment StoreEntitySet="OPenningValues">
+          <ScalarProperty Name="OPenningValues_ID" ColumnName="OPenningValues_ID" />
+          <ScalarProperty Name="OPenningValues_AccountID" ColumnName="OPenningValues_AccountID" />
+          <ScalarProperty Name="OPenningValues_Code" ColumnName="OPenningValues_Code" />
+          <ScalarProperty Name="OPenningValues_Debit" ColumnName="OPenningValues_Debit" />
+          <ScalarProperty Name="OPenningValues_Credit" ColumnName="OPenningValues_Credit" />
+          <ScalarProperty Name="OPenningValues_value" ColumnName="OPenningValues_value" />
+          <ScalarProperty Name="OPenningValues_Date" ColumnName="OPenningValues_Date" />
+          <ScalarProperty Name="OPenningValues_DeleteStatus" ColumnName="OPenningValues_DeleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OperationsLogs">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.OperationsLog">
+        <MappingFragment StoreEntitySet="OperationsLog">
+          <ScalarProperty Name="OperationLog_ID" ColumnName="OperationLog_ID" />
+          <ScalarProperty Name="OperationLog_Description" ColumnName="OperationLog_Description" />
+          <ScalarProperty Name="OperationLog_User_ID" ColumnName="OperationLog_User_ID" />
+          <ScalarProperty Name="OperationLog_Date" ColumnName="OperationLog_Date" />
+          <ScalarProperty Name="OperationLog_TransactionTypeID" ColumnName="OperationLog_TransactionTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pages">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Page">
+        <MappingFragment StoreEntitySet="Pages">
+          <ScalarProperty Name="Page_ID" ColumnName="Page_ID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PayCatExpnces">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.PayCatExpnce">
+        <MappingFragment StoreEntitySet="PayCatExpnces">
+          <ScalarProperty Name="PayCatExpnces_ID" ColumnName="PayCatExpnces_ID" />
+          <ScalarProperty Name="PayCatExpnces_StuID" ColumnName="PayCatExpnces_StuID" />
+          <ScalarProperty Name="PayCatExpnces_CatID" ColumnName="PayCatExpnces_CatID" />
+          <ScalarProperty Name="PayCatExpnces_Discount" ColumnName="PayCatExpnces_Discount" />
+          <ScalarProperty Name="PayCatExpnces_Value" ColumnName="PayCatExpnces_Value" />
+          <ScalarProperty Name="PayCatExpnces_NetValue" ColumnName="PayCatExpnces_NetValue" />
+          <ScalarProperty Name="PayCatExpnces_Nots" ColumnName="PayCatExpnces_Nots" />
+          <ScalarProperty Name="PayCatExpnces_CashID" ColumnName="PayCatExpnces_CashID" />
+          <ScalarProperty Name="PayCatExpnces_DOP" ColumnName="PayCatExpnces_DOP" />
+          <ScalarProperty Name="PayCatExpnces_DeleteStatus" ColumnName="PayCatExpnces_DeleteStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Section">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_StageID" ColumnName="Section_StageID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+          <ScalarProperty Name="Section_Deletestatus" ColumnName="Section_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stages">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Stage">
+        <MappingFragment StoreEntitySet="Stages">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+          <ScalarProperty Name="Stage_Deletestatus" ColumnName="Stage_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentAttendances">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.StudentAttendance">
+        <MappingFragment StoreEntitySet="StudentAttendance">
+          <ScalarProperty Name="StudentAttend_ID" ColumnName="StudentAttend_ID" />
+          <ScalarProperty Name="StudentAttend_Date" ColumnName="StudentAttend_Date" />
+          <ScalarProperty Name="StudentAttend_StuID" ColumnName="StudentAttend_StuID" />
+          <ScalarProperty Name="StudentAttend_CatID" ColumnName="StudentAttend_CatID" />
+          <ScalarProperty Name="StudentAttend_Status" ColumnName="StudentAttend_Status" />
+          <ScalarProperty Name="StudentAttend_Deletestatus" ColumnName="StudentAttend_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentCats">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.StudentCat">
+        <MappingFragment StoreEntitySet="StudentCats">
+          <ScalarProperty Name="StudentCat_ID" ColumnName="StudentCat_ID" />
+          <ScalarProperty Name="StudentCat_StuID" ColumnName="StudentCat_StuID" />
+          <ScalarProperty Name="StudentCat_CatID" ColumnName="StudentCat_CatID" />
+          <ScalarProperty Name="StudentCat_date" ColumnName="StudentCat_date" />
+          <ScalarProperty Name="StudentCat_deletestatus" ColumnName="StudentCat_deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentLeaves">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.StudentLeaf">
+        <MappingFragment StoreEntitySet="StudentLeaves">
+          <ScalarProperty Name="StudentLeave_ID" ColumnName="StudentLeave_ID" />
+          <ScalarProperty Name="StudentLeave_date" ColumnName="StudentLeave_date" />
+          <ScalarProperty Name="StudentLeave_StuID" ColumnName="StudentLeave_StuID" />
+          <ScalarProperty Name="StudentLeave_Deletestatus" ColumnName="StudentLeave_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentPayes">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.StudentPaye">
+        <MappingFragment StoreEntitySet="StudentPayes">
+          <ScalarProperty Name="StudentPayes_ID" ColumnName="StudentPayes_ID" />
+          <ScalarProperty Name="StudentPayes_StuID" ColumnName="StudentPayes_StuID" />
+          <ScalarProperty Name="StudentPayes_CatID" ColumnName="StudentPayes_CatID" />
+          <ScalarProperty Name="StudentPayes_Date" ColumnName="StudentPayes_Date" />
+          <ScalarProperty Name="StudentPayes_Totalvalue" ColumnName="StudentPayes_Totalvalue" />
+          <ScalarProperty Name="StudentPayes_CatCost" ColumnName="StudentPayes_CatCost" />
+          <ScalarProperty Name="StudentPayes_NotesEXp" ColumnName="StudentPayes_NotesEXp" />
+          <ScalarProperty Name="StudentPayes_Netvalue" ColumnName="StudentPayes_Netvalue" />
+          <ScalarProperty Name="StudentPayes_PayStuType" ColumnName="StudentPayes_PayStuType" />
+          <ScalarProperty Name="StudentPayes_PaysType" ColumnName="StudentPayes_PaysType" />
+          <ScalarProperty Name="StudentPayes_CashID" ColumnName="StudentPayes_CashID" />
+          <ScalarProperty Name="StudentPayes_Detestatus" ColumnName="StudentPayes_Detestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentPaysNews">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.StudentPaysNew">
+        <MappingFragment StoreEntitySet="StudentPaysNew">
+          <ScalarProperty Name="StudentPay_ID" ColumnName="StudentPay_ID" />
+          <ScalarProperty Name="StudentPay_catid" ColumnName="StudentPay_catid" />
+          <ScalarProperty Name="StudentPay_stuid" ColumnName="StudentPay_stuid" />
+          <ScalarProperty Name="StudentPay_Date" ColumnName="StudentPay_Date" />
+          <ScalarProperty Name="StudentPay_PayStatus" ColumnName="StudentPay_PayStatus" />
+          <ScalarProperty Name="StudentPay_catcost" ColumnName="StudentPay_catcost" />
+          <ScalarProperty Name="StudentPay_discount" ColumnName="StudentPay_discount" />
+          <ScalarProperty Name="StudentPay_notesscost" ColumnName="StudentPay_notesscost" />
+          <ScalarProperty Name="StudentPay_Netvalue" ColumnName="StudentPay_Netvalue" />
+          <ScalarProperty Name="StudentPay_Paid" ColumnName="StudentPay_Paid" />
+          <ScalarProperty Name="StudentPay_Remaining" ColumnName="StudentPay_Remaining" />
+          <ScalarProperty Name="StudentPay_cashid" ColumnName="StudentPay_cashid" />
+          <ScalarProperty Name="StudentPay_Deletestatus" ColumnName="StudentPay_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudentReturns">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.StudentReturn">
+        <MappingFragment StoreEntitySet="StudentReturns">
+          <ScalarProperty Name="StudentReturn_ID" ColumnName="StudentReturn_ID" />
+          <ScalarProperty Name="StudentReturn_Date" ColumnName="StudentReturn_Date" />
+          <ScalarProperty Name="StudentReturn_StuID" ColumnName="StudentReturn_StuID" />
+          <ScalarProperty Name="StudentReturn_CashID" ColumnName="StudentReturn_CashID" />
+          <ScalarProperty Name="StudentReturn_Remaining" ColumnName="StudentReturn_Remaining" />
+          <ScalarProperty Name="StudentReturn_Satus" ColumnName="StudentReturn_Satus" />
+          <ScalarProperty Name="StudentReturn_DeletStaus" ColumnName="StudentReturn_DeletStaus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_StageID" ColumnName="Student_StageID" />
+          <ScalarProperty Name="Student_SectionID" ColumnName="Student_SectionID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Address" ColumnName="Student_Address" />
+          <ScalarProperty Name="Student_School" ColumnName="Student_School" />
+          <ScalarProperty Name="Student_Phone1" ColumnName="Student_Phone1" />
+          <ScalarProperty Name="Student_Phone2" ColumnName="Student_Phone2" />
+          <ScalarProperty Name="Student_Notes" ColumnName="Student_Notes" />
+          <ScalarProperty Name="Student_DeleteStatus" ColumnName="Student_DeleteStatus" />
+          <ScalarProperty Name="Student_Barcode" ColumnName="Student_Barcode" />
+          <ScalarProperty Name="Student_CatID" ColumnName="Student_CatID" />
+          <ScalarProperty Name="Student_Payedstatus" ColumnName="Student_Payedstatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.Subject">
+        <MappingFragment StoreEntitySet="Subjects">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+          <ScalarProperty Name="Subject_Notes" ColumnName="Subject_Notes" />
+          <ScalarProperty Name="Subject_Deletestatus" ColumnName="Subject_Deletestatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPermissions">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.UserPermission">
+        <MappingFragment StoreEntitySet="UserPermission">
+          <ScalarProperty Name="UserPage_ID" ColumnName="UserPage_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Page_ID" ColumnName="Page_ID" />
+          <ScalarProperty Name="UserPage_USerID" ColumnName="UserPage_USerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DBMRCodeneWV2Model.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="UserIDD" ColumnName="UserIDD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Add_Empatendance" FunctionName="DBMRCodeneWV2Model.Store.Add_Empatendance" />
+    <FunctionImportMapping FunctionImportName="Add_EmpLeave" FunctionName="DBMRCodeneWV2Model.Store.Add_EmpLeave" />
+    <FunctionImportMapping FunctionImportName="Add_Studentatendance" FunctionName="DBMRCodeneWV2Model.Store.Add_Studentatendance" />
+    <FunctionImportMapping FunctionImportName="Add_StudentatendanceBybarcode" FunctionName="DBMRCodeneWV2Model.Store.Add_StudentatendanceBybarcode" />
+    <FunctionImportMapping FunctionImportName="AddAttendance" FunctionName="DBMRCodeneWV2Model.Store.AddAttendance" />
+    <FunctionImportMapping FunctionImportName="addCatogaryDetails" FunctionName="DBMRCodeneWV2Model.Store.addCatogaryDetails" />
+    <FunctionImportMapping FunctionImportName="addCatogaryDetailsNew" FunctionName="DBMRCodeneWV2Model.Store.addCatogaryDetailsNew" />
+    <FunctionImportMapping FunctionImportName="addcatogeries" FunctionName="DBMRCodeneWV2Model.Store.addcatogeries" />
+    <FunctionImportMapping FunctionImportName="ADDEmpAttendance" FunctionName="DBMRCodeneWV2Model.Store.ADDEmpAttendance" />
+    <FunctionImportMapping FunctionImportName="ADDEmpLEave" FunctionName="DBMRCodeneWV2Model.Store.ADDEmpLEave" />
+    <FunctionImportMapping FunctionImportName="AddEmpolyee" FunctionName="DBMRCodeneWV2Model.Store.AddEmpolyee" />
+    <FunctionImportMapping FunctionImportName="AddExam" FunctionName="DBMRCodeneWV2Model.Store.AddExam" />
+    <FunctionImportMapping FunctionImportName="AddExamResults" FunctionName="DBMRCodeneWV2Model.Store.AddExamResults" />
+    <FunctionImportMapping FunctionImportName="addPerUser" FunctionName="DBMRCodeneWV2Model.Store.addPerUser" />
+    <FunctionImportMapping FunctionImportName="ADDRRegistration" FunctionName="DBMRCodeneWV2Model.Store.ADDRRegistration" />
+    <FunctionImportMapping FunctionImportName="AddSection" FunctionName="DBMRCodeneWV2Model.Store.AddSection" />
+    <FunctionImportMapping FunctionImportName="AddStages" FunctionName="DBMRCodeneWV2Model.Store.AddStages" />
+    <FunctionImportMapping FunctionImportName="ADDStuAttendance" FunctionName="DBMRCodeneWV2Model.Store.ADDStuAttendance" />
+    <FunctionImportMapping FunctionImportName="AddStudent" FunctionName="DBMRCodeneWV2Model.Store.AddStudent" />
+    <FunctionImportMapping FunctionImportName="AddStudentBycode" FunctionName="DBMRCodeneWV2Model.Store.AddStudentBycode" />
+    <FunctionImportMapping FunctionImportName="addstudentcat" FunctionName="DBMRCodeneWV2Model.Store.addstudentcat" />
+    <FunctionImportMapping FunctionImportName="ADDStudentLEave" FunctionName="DBMRCodeneWV2Model.Store.ADDStudentLEave" />
+    <FunctionImportMapping FunctionImportName="ADDStudentPayes" FunctionName="DBMRCodeneWV2Model.Store.ADDStudentPayes" />
+    <FunctionImportMapping FunctionImportName="AddStudentPaysNew" FunctionName="DBMRCodeneWV2Model.Store.AddStudentPaysNew" />
+    <FunctionImportMapping FunctionImportName="ADDStudentReturn" FunctionName="DBMRCodeneWV2Model.Store.ADDStudentReturn" />
+    <FunctionImportMapping FunctionImportName="ADDUSER" FunctionName="DBMRCodeneWV2Model.Store.ADDUSER" />
+    <FunctionImportMapping FunctionImportName="AllUsers" FunctionName="DBMRCodeneWV2Model.Store.AllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.AllUsers_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="UserIDD" ColumnName="UserIDD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AllUsersNeew" FunctionName="DBMRCodeneWV2Model.Store.AllUsersNeew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.AllUsersNeew_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkattendance" FunctionName="DBMRCodeneWV2Model.Store.checkattendance" />
+    <FunctionImportMapping FunctionImportName="checkCash" FunctionName="DBMRCodeneWV2Model.Store.checkCash" />
+    <FunctionImportMapping FunctionImportName="checkcatogery" FunctionName="DBMRCodeneWV2Model.Store.checkcatogery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkcatogery_Result">
+          <ScalarProperty Name="StudentCat_ID" ColumnName="StudentCat_ID" />
+          <ScalarProperty Name="StudentCat_StuID" ColumnName="StudentCat_StuID" />
+          <ScalarProperty Name="StudentCat_CatID" ColumnName="StudentCat_CatID" />
+          <ScalarProperty Name="StudentCat_date" ColumnName="StudentCat_date" />
+          <ScalarProperty Name="StudentCat_deletestatus" ColumnName="StudentCat_deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkExam" FunctionName="DBMRCodeneWV2Model.Store.checkExam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkExam_Result">
+          <ScalarProperty Name="ExamResult_ID" ColumnName="ExamResult_ID" />
+          <ScalarProperty Name="ExamResult_StuID" ColumnName="ExamResult_StuID" />
+          <ScalarProperty Name="ExamResult_Examid" ColumnName="ExamResult_Examid" />
+          <ScalarProperty Name="ExamResult_Status" ColumnName="ExamResult_Status" />
+          <ScalarProperty Name="ExamResult_degree" ColumnName="ExamResult_degree" />
+          <ScalarProperty Name="ExamResult_date" ColumnName="ExamResult_date" />
+          <ScalarProperty Name="ExamResult_deletestatus" ColumnName="ExamResult_deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkIfEmpIsAttendance" FunctionName="DBMRCodeneWV2Model.Store.checkIfEmpIsAttendance" />
+    <FunctionImportMapping FunctionImportName="checkIfEmpIsLeave" FunctionName="DBMRCodeneWV2Model.Store.checkIfEmpIsLeave" />
+    <FunctionImportMapping FunctionImportName="CheckIfExamExist" FunctionName="DBMRCodeneWV2Model.Store.CheckIfExamExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.CheckIfExamExist_Result">
+          <ScalarProperty Name="Exams_ID" ColumnName="Exams_ID" />
+          <ScalarProperty Name="Exams_Name" ColumnName="Exams_Name" />
+          <ScalarProperty Name="Exams_highdegree" ColumnName="Exams_highdegree" />
+          <ScalarProperty Name="Exams_Lowdegree" ColumnName="Exams_Lowdegree" />
+          <ScalarProperty Name="Exams_deleteStatus" ColumnName="Exams_deleteStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CheckIfSectionExist" FunctionName="DBMRCodeneWV2Model.Store.CheckIfSectionExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.CheckIfSectionExist_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_StageID" ColumnName="Section_StageID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+          <ScalarProperty Name="Section_Deletestatus" ColumnName="Section_Deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CheckIfStageExist" FunctionName="DBMRCodeneWV2Model.Store.CheckIfStageExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.CheckIfStageExist_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+          <ScalarProperty Name="Stage_Deletestatus" ColumnName="Stage_Deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkIfStudentIsAttendance" FunctionName="DBMRCodeneWV2Model.Store.checkIfStudentIsAttendance" />
+    <FunctionImportMapping FunctionImportName="checkIfStudentIsAttendanceBybarcode" FunctionName="DBMRCodeneWV2Model.Store.checkIfStudentIsAttendanceBybarcode" />
+    <FunctionImportMapping FunctionImportName="CheckIfSubjectExist" FunctionName="DBMRCodeneWV2Model.Store.CheckIfSubjectExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.CheckIfSubjectExist_Result">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+          <ScalarProperty Name="Subject_Notes" ColumnName="Subject_Notes" />
+          <ScalarProperty Name="Subject_Deletestatus" ColumnName="Subject_Deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkJop" FunctionName="DBMRCodeneWV2Model.Store.checkJop">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkJop_Result">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_IPhone" ColumnName="Employee_IPhone" />
+          <ScalarProperty Name="Employee_Issn" ColumnName="Employee_Issn" />
+          <ScalarProperty Name="Employee_IAddress" ColumnName="Employee_IAddress" />
+          <ScalarProperty Name="Employee_IUser_ID" ColumnName="Employee_IUser_ID" />
+          <ScalarProperty Name="Employee_IJob_ID" ColumnName="Employee_IJob_ID" />
+          <ScalarProperty Name="Employee_salary" ColumnName="Employee_salary" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="Employee_UserID" ColumnName="Employee_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkSection" FunctionName="DBMRCodeneWV2Model.Store.checkSection">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkSection_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_StageID" ColumnName="Student_StageID" />
+          <ScalarProperty Name="Student_SectionID" ColumnName="Student_SectionID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Address" ColumnName="Student_Address" />
+          <ScalarProperty Name="Student_School" ColumnName="Student_School" />
+          <ScalarProperty Name="Student_Phone1" ColumnName="Student_Phone1" />
+          <ScalarProperty Name="Student_Phone2" ColumnName="Student_Phone2" />
+          <ScalarProperty Name="Student_Notes" ColumnName="Student_Notes" />
+          <ScalarProperty Name="Student_DeleteStatus" ColumnName="Student_DeleteStatus" />
+          <ScalarProperty Name="Student_Barcode" ColumnName="Student_Barcode" />
+          <ScalarProperty Name="Student_CatID" ColumnName="Student_CatID" />
+          <ScalarProperty Name="Student_Payedstatus" ColumnName="Student_Payedstatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkstage" FunctionName="DBMRCodeneWV2Model.Store.checkstage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkstage_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+          <ScalarProperty Name="Catogary_StageID" ColumnName="Catogary_StageID" />
+          <ScalarProperty Name="Catogary_SectionID" ColumnName="Catogary_SectionID" />
+          <ScalarProperty Name="Catogary_Cost" ColumnName="Catogary_Cost" />
+          <ScalarProperty Name="Catogary_SubjectID" ColumnName="Catogary_SubjectID" />
+          <ScalarProperty Name="Catogary_Empid" ColumnName="Catogary_Empid" />
+          <ScalarProperty Name="Catogary_DOC" ColumnName="Catogary_DOC" />
+          <ScalarProperty Name="Catogary_Deletestatus" ColumnName="Catogary_Deletestatus" />
+          <ScalarProperty Name="Catogary_PayedWays" ColumnName="Catogary_PayedWays" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_StageID" ColumnName="Student_StageID" />
+          <ScalarProperty Name="Student_SectionID" ColumnName="Student_SectionID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Address" ColumnName="Student_Address" />
+          <ScalarProperty Name="Student_School" ColumnName="Student_School" />
+          <ScalarProperty Name="Student_Phone1" ColumnName="Student_Phone1" />
+          <ScalarProperty Name="Student_Phone2" ColumnName="Student_Phone2" />
+          <ScalarProperty Name="Student_Notes" ColumnName="Student_Notes" />
+          <ScalarProperty Name="Student_DeleteStatus" ColumnName="Student_DeleteStatus" />
+          <ScalarProperty Name="Student_Barcode" ColumnName="Student_Barcode" />
+          <ScalarProperty Name="Student_CatID" ColumnName="Student_CatID" />
+          <ScalarProperty Name="Student_Payedstatus" ColumnName="Student_Payedstatus" />
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_StageID" ColumnName="Section_StageID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+          <ScalarProperty Name="Section_Deletestatus" ColumnName="Section_Deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkStudent" FunctionName="DBMRCodeneWV2Model.Store.checkStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkStudent_Result">
+          <ScalarProperty Name="StudentAttend_ID" ColumnName="StudentAttend_ID" />
+          <ScalarProperty Name="StudentAttend_Date" ColumnName="StudentAttend_Date" />
+          <ScalarProperty Name="StudentAttend_StuID" ColumnName="StudentAttend_StuID" />
+          <ScalarProperty Name="StudentAttend_CatID" ColumnName="StudentAttend_CatID" />
+          <ScalarProperty Name="StudentAttend_Status" ColumnName="StudentAttend_Status" />
+          <ScalarProperty Name="StudentAttend_Deletestatus" ColumnName="StudentAttend_Deletestatus" />
+          <ScalarProperty Name="StudentCat_ID" ColumnName="StudentCat_ID" />
+          <ScalarProperty Name="StudentCat_StuID" ColumnName="StudentCat_StuID" />
+          <ScalarProperty Name="StudentCat_CatID" ColumnName="StudentCat_CatID" />
+          <ScalarProperty Name="StudentCat_date" ColumnName="StudentCat_date" />
+          <ScalarProperty Name="StudentCat_deletestatus" ColumnName="StudentCat_deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="checkSubject" FunctionName="DBMRCodeneWV2Model.Store.checkSubject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.checkSubject_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+          <ScalarProperty Name="Catogary_StageID" ColumnName="Catogary_StageID" />
+          <ScalarProperty Name="Catogary_SectionID" ColumnName="Catogary_SectionID" />
+          <ScalarProperty Name="Catogary_Cost" ColumnName="Catogary_Cost" />
+          <ScalarProperty Name="Catogary_SubjectID" ColumnName="Catogary_SubjectID" />
+          <ScalarProperty Name="Catogary_Empid" ColumnName="Catogary_Empid" />
+          <ScalarProperty Name="Catogary_DOC" ColumnName="Catogary_DOC" />
+          <ScalarProperty Name="Catogary_Deletestatus" ColumnName="Catogary_Deletestatus" />
+          <ScalarProperty Name="Catogary_PayedWays" ColumnName="Catogary_PayedWays" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="countstudent" FunctionName="DBMRCodeneWV2Model.Store.countstudent" />
+    <FunctionImportMapping FunctionImportName="Deletecatogery" FunctionName="DBMRCodeneWV2Model.Store.Deletecatogery" />
+    <FunctionImportMapping FunctionImportName="deleteemp" FunctionName="DBMRCodeneWV2Model.Store.deleteemp" />
+    <FunctionImportMapping FunctionImportName="DeleteEmpolyee" FunctionName="DBMRCodeneWV2Model.Store.DeleteEmpolyee" />
+    <FunctionImportMapping FunctionImportName="DeleteeStages" FunctionName="DBMRCodeneWV2Model.Store.DeleteeStages" />
+    <FunctionImportMapping FunctionImportName="DeleteExam" FunctionName="DBMRCodeneWV2Model.Store.DeleteExam" />
+    <FunctionImportMapping FunctionImportName="deleteExamResults" FunctionName="DBMRCodeneWV2Model.Store.deleteExamResults" />
+    <FunctionImportMapping FunctionImportName="DeleteForUpdate" FunctionName="DBMRCodeneWV2Model.Store.DeleteForUpdate" />
+    <FunctionImportMapping FunctionImportName="DeleteForUpdateNew" FunctionName="DBMRCodeneWV2Model.Store.DeleteForUpdateNew" />
+    <FunctionImportMapping FunctionImportName="DeleteJob" FunctionName="DBMRCodeneWV2Model.Store.DeleteJob" />
+    <FunctionImportMapping FunctionImportName="DeletePerUser" FunctionName="DBMRCodeneWV2Model.Store.DeletePerUser" />
+    <FunctionImportMapping FunctionImportName="DeleteSection" FunctionName="DBMRCodeneWV2Model.Store.DeleteSection" />
+    <FunctionImportMapping FunctionImportName="DeleteStudent" FunctionName="DBMRCodeneWV2Model.Store.DeleteStudent" />
+    <FunctionImportMapping FunctionImportName="DeleteSubject" FunctionName="DBMRCodeneWV2Model.Store.DeleteSubject" />
+    <FunctionImportMapping FunctionImportName="DeleteUser" FunctionName="DBMRCodeneWV2Model.Store.DeleteUser" />
+    <FunctionImportMapping FunctionImportName="DisplayEmpolyees" FunctionName="DBMRCodeneWV2Model.Store.DisplayEmpolyees">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.DisplayEmpolyees_Result">
+          <ScalarProperty Name="رقم_الموظف" ColumnName="رقم الموظف" />
+          <ScalarProperty Name="اسم_الموظف" ColumnName="اسم الموظف" />
+          <ScalarProperty Name="رقم_الهاتف" ColumnName="رقم الهاتف" />
+          <ScalarProperty Name="الرقم_القومى" ColumnName="الرقم القومى" />
+          <ScalarProperty Name="العنوان" ColumnName="العنوان" />
+          <ScalarProperty Name="اسم_المستخدم" ColumnName="اسم المستخدم" />
+          <ScalarProperty Name="كلمة_المرور" ColumnName="كلمة المرور" />
+          <ScalarProperty Name="الوظيفة" ColumnName="الوظيفة" />
+          <ScalarProperty Name="رقم_المستخدم" ColumnName="رقم المستخدم" />
+          <ScalarProperty Name="المرتب" ColumnName="المرتب" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="DisplayJobs" FunctionName="DBMRCodeneWV2Model.Store.DisplayJobs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.DisplayJobs_Result">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Job_name" ColumnName="Job_name" />
+          <ScalarProperty Name="powers" ColumnName="powers" />
+          <ScalarProperty Name="Job_DeleteStatus" ColumnName="Job_DeleteStatus" />
+          <ScalarProperty Name="Job_UserID" ColumnName="Job_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ExamResult" FunctionName="DBMRCodeneWV2Model.Store.ExamResult">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ExamResult_Result">
+          <ScalarProperty Name="ExamResult_ID" ColumnName="ExamResult_ID" />
+          <ScalarProperty Name="التاريخ" ColumnName="التاريخ" />
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="الاختبار" ColumnName="الاختبار" />
+          <ScalarProperty Name="الدرجة" ColumnName="الدرجة" />
+          <ScalarProperty Name="الحالة" ColumnName="الحالة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetAllOperation" FunctionName="DBMRCodeneWV2Model.Store.GetAllOperation">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetAllOperation_Result">
+          <ScalarProperty Name="النشاط" ColumnName="النشاط" />
+          <ScalarProperty Name="المستخدم" ColumnName="المستخدم" />
+          <ScalarProperty Name="تاريخ_النشاط" ColumnName="تاريخ النشاط" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GETcahFromCurrentvalue" FunctionName="DBMRCodeneWV2Model.Store.GETcahFromCurrentvalue" />
+    <FunctionImportMapping FunctionImportName="GetCatbystudentid" FunctionName="DBMRCodeneWV2Model.Store.GetCatbystudentid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetCatbystudentid_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCatcost" FunctionName="DBMRCodeneWV2Model.Store.GetCatcost" />
+    <FunctionImportMapping FunctionImportName="getCatogaryDetailsByID" FunctionName="DBMRCodeneWV2Model.Store.getCatogaryDetailsByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getCatogaryDetailsByID_Result">
+          <ScalarProperty Name="CatogaryDetails_ID" ColumnName="CatogaryDetails_ID" />
+          <ScalarProperty Name="CatogaryDetails_CatogeryID" ColumnName="CatogaryDetails_CatogeryID" />
+          <ScalarProperty Name="CatogaryDetails_Day" ColumnName="CatogaryDetails_Day" />
+          <ScalarProperty Name="CatogaryDetails_Time" ColumnName="CatogaryDetails_Time" />
+          <ScalarProperty Name="CatogaryDetails_date" ColumnName="CatogaryDetails_date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCatogeryDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetCatogeryDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetCatogeryDataForCombobox_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCatogeryDataForComboboxbybarcode" FunctionName="DBMRCodeneWV2Model.Store.GetCatogeryDataForComboboxbybarcode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetCatogeryDataForComboboxbybarcode_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCatogeryDataForComboboxs" FunctionName="DBMRCodeneWV2Model.Store.GetCatogeryDataForComboboxs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetCatogeryDataForComboboxs_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetEmployeeyDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetEmployeeyDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetEmployeeyDataForCombobox_Result">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetExamDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetExamDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetExamDataForCombobox_Result">
+          <ScalarProperty Name="Exams_ID" ColumnName="Exams_ID" />
+          <ScalarProperty Name="Exams_Name" ColumnName="Exams_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPageID" FunctionName="DBMRCodeneWV2Model.Store.GetPageID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetPageID_Result">
+          <ScalarProperty Name="Page_ID" ColumnName="Page_ID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetPaySatus" FunctionName="DBMRCodeneWV2Model.Store.GetPaySatus" />
+    <FunctionImportMapping FunctionImportName="GetPaySatusbyid" FunctionName="DBMRCodeneWV2Model.Store.GetPaySatusbyid" />
+    <FunctionImportMapping FunctionImportName="getsectionbybarcode" FunctionName="DBMRCodeneWV2Model.Store.getsectionbybarcode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getsectionbybarcode_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSectionDataBystageid" FunctionName="DBMRCodeneWV2Model.Store.GetSectionDataBystageid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetSectionDataBystageid_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSectionDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetSectionDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetSectionDataForCombobox_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSectionidDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetSectionidDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetSectionidDataForCombobox_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSpisficCatogeryDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetSpisficCatogeryDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetSpisficCatogeryDataForCombobox_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getstagebybarcode" FunctionName="DBMRCodeneWV2Model.Store.getstagebybarcode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getstagebybarcode_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetStagesDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetStagesDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetStagesDataForCombobox_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetStagesidDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.GetStagesidDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetStagesidDataForCombobox_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getstudentbybarcode" FunctionName="DBMRCodeneWV2Model.Store.getstudentbybarcode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getstudentbybarcode_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getstudentbyCatid" FunctionName="DBMRCodeneWV2Model.Store.getstudentbyCatid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getstudentbyCatid_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getstudentbyid" FunctionName="DBMRCodeneWV2Model.Store.getstudentbyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getstudentbyid_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetstudentDataBycat" FunctionName="DBMRCodeneWV2Model.Store.GetstudentDataBycat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetstudentDataBycat_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetStudentFile" FunctionName="DBMRCodeneWV2Model.Store.GetStudentFile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetStudentFile_Result">
+          <ScalarProperty Name="تاريخ_الامتحان" ColumnName="تاريخ الامتحان" />
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="المجموعة" ColumnName="المجموعة" />
+          <ScalarProperty Name="المادة" ColumnName="المادة" />
+          <ScalarProperty Name="الدرجة" ColumnName="الدرجة" />
+          <ScalarProperty Name="الحالة" ColumnName="الحالة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="getstudentforcombobox" FunctionName="DBMRCodeneWV2Model.Store.getstudentforcombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.getstudentforcombobox_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSubjectforcombox" FunctionName="DBMRCodeneWV2Model.Store.GetSubjectforcombox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetSubjectforcombox_Result">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="Subject_Name" ColumnName="Subject_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTeacherforcombox" FunctionName="DBMRCodeneWV2Model.Store.GetTeacherforcombox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetTeacherforcombox_Result">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetUsers" FunctionName="DBMRCodeneWV2Model.Store.GetUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.GetUsers_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="IB_GetCashDataForCombobox" FunctionName="DBMRCodeneWV2Model.Store.IB_GetCashDataForCombobox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.IB_GetCashDataForCombobox_Result">
+          <ScalarProperty Name="Cash_ID" ColumnName="Cash_ID" />
+          <ScalarProperty Name="Cash_Name" ColumnName="Cash_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="insert_PayCatExpnces" FunctionName="DBMRCodeneWV2Model.Store.insert_PayCatExpnces" />
+    <FunctionImportMapping FunctionImportName="insertEmplLeave" FunctionName="DBMRCodeneWV2Model.Store.insertEmplLeave" />
+    <FunctionImportMapping FunctionImportName="insertStudentAttendance" FunctionName="DBMRCodeneWV2Model.Store.insertStudentAttendance" />
+    <FunctionImportMapping FunctionImportName="insertStudentLeaves" FunctionName="DBMRCodeneWV2Model.Store.insertStudentLeaves" />
+    <FunctionImportMapping FunctionImportName="insertSubject" FunctionName="DBMRCodeneWV2Model.Store.insertSubject" />
+    <FunctionImportMapping FunctionImportName="LastInsertUser" FunctionName="DBMRCodeneWV2Model.Store.LastInsertUser" />
+    <FunctionImportMapping FunctionImportName="MAproc_CheckIfExpenseTypeExist" FunctionName="DBMRCodeneWV2Model.Store.MAproc_CheckIfExpenseTypeExist" />
+    <FunctionImportMapping FunctionImportName="MAproc_DeleteExpense" FunctionName="DBMRCodeneWV2Model.Store.MAproc_DeleteExpense" />
+    <FunctionImportMapping FunctionImportName="MAproc_DeleteExpenseType" FunctionName="DBMRCodeneWV2Model.Store.MAproc_DeleteExpenseType" />
+    <FunctionImportMapping FunctionImportName="MAproc_InsertExpense" FunctionName="DBMRCodeneWV2Model.Store.MAproc_InsertExpense" />
+    <FunctionImportMapping FunctionImportName="MAproc_InsertExpenseType" FunctionName="DBMRCodeneWV2Model.Store.MAproc_InsertExpenseType" />
+    <FunctionImportMapping FunctionImportName="MAproc_InsertOperationLog" FunctionName="DBMRCodeneWV2Model.Store.MAproc_InsertOperationLog" />
+    <FunctionImportMapping FunctionImportName="MAproc_SelectAllExpenseType" FunctionName="DBMRCodeneWV2Model.Store.MAproc_SelectAllExpenseType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.MAproc_SelectAllExpenseType_Result">
+          <ScalarProperty Name="ExpenseType_ID" ColumnName="ExpenseType_ID" />
+          <ScalarProperty Name="ExpenseType_Name" ColumnName="ExpenseType_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAproc_SelectExpenseType" FunctionName="DBMRCodeneWV2Model.Store.MAproc_SelectExpenseType">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.MAproc_SelectExpenseType_Result">
+          <ScalarProperty Name="ExpenseType_ID" ColumnName="ExpenseType_ID" />
+          <ScalarProperty Name="اسم_المصروف" ColumnName="اسم المصروف" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAproc_SelectExpenseTypeByID" FunctionName="DBMRCodeneWV2Model.Store.MAproc_SelectExpenseTypeByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.MAproc_SelectExpenseTypeByID_Result">
+          <ScalarProperty Name="ExpenseType_ID" ColumnName="ExpenseType_ID" />
+          <ScalarProperty Name="ExpenseType_Name" ColumnName="ExpenseType_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAproc_SelectExpenseTypeByName" FunctionName="DBMRCodeneWV2Model.Store.MAproc_SelectExpenseTypeByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.MAproc_SelectExpenseTypeByName_Result">
+          <ScalarProperty Name="ExpenseType_ID" ColumnName="ExpenseType_ID" />
+          <ScalarProperty Name="اسم_المصروف" ColumnName="اسم المصروف" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAproc_SeleteAllExpenses" FunctionName="DBMRCodeneWV2Model.Store.MAproc_SeleteAllExpenses">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.MAproc_SeleteAllExpenses_Result">
+          <ScalarProperty Name="Expense_ID" ColumnName="Expense_ID" />
+          <ScalarProperty Name="نوع_المصروف" ColumnName="نوع المصروف" />
+          <ScalarProperty Name="التاريخ" ColumnName="التاريخ" />
+          <ScalarProperty Name="المصروف" ColumnName="المصروف" />
+          <ScalarProperty Name="القيمة" ColumnName="القيمة" />
+          <ScalarProperty Name="التفاصيل" ColumnName="التفاصيل" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAproc_SeleteExpenseByID" FunctionName="DBMRCodeneWV2Model.Store.MAproc_SeleteExpenseByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.MAproc_SeleteExpenseByID_Result">
+          <ScalarProperty Name="Expense_ID" ColumnName="Expense_ID" />
+          <ScalarProperty Name="Expense_ExpenseTypeID" ColumnName="Expense_ExpenseTypeID" />
+          <ScalarProperty Name="ExpenseType_Name" ColumnName="ExpenseType_Name" />
+          <ScalarProperty Name="Expense_Date" ColumnName="Expense_Date" />
+          <ScalarProperty Name="Expense_Name" ColumnName="Expense_Name" />
+          <ScalarProperty Name="Expense_Value" ColumnName="Expense_Value" />
+          <ScalarProperty Name="Expense_Details" ColumnName="Expense_Details" />
+          <ScalarProperty Name="Expense_CashID" ColumnName="Expense_CashID" />
+          <ScalarProperty Name="Expense_BankID" ColumnName="Expense_BankID" />
+          <ScalarProperty Name="Expense_CheckNum" ColumnName="Expense_CheckNum" />
+          <ScalarProperty Name="Expense_WarehouseID" ColumnName="Expense_WarehouseID" />
+          <ScalarProperty Name="Expense_UserID" ColumnName="Expense_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MAproc_UpdateExpense" FunctionName="DBMRCodeneWV2Model.Store.MAproc_UpdateExpense" />
+    <FunctionImportMapping FunctionImportName="MAproc_UpdateExpenseType" FunctionName="DBMRCodeneWV2Model.Store.MAproc_UpdateExpenseType" />
+    <FunctionImportMapping FunctionImportName="PrintbarcodeForCatogery" FunctionName="DBMRCodeneWV2Model.Store.PrintbarcodeForCatogery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.PrintbarcodeForCatogery_Result">
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Barcode" ColumnName="Student_Barcode" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PrintStudentForCatogery" FunctionName="DBMRCodeneWV2Model.Store.PrintStudentForCatogery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.PrintStudentForCatogery_Result">
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Barcode" ColumnName="Student_Barcode" />
+          <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+          <ScalarProperty Name="Student_Phone1" ColumnName="Student_Phone1" />
+          <ScalarProperty Name="Student_Phone2" ColumnName="Student_Phone2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Report_Attendance" FunctionName="DBMRCodeneWV2Model.Store.Report_Attendance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Report_Attendance_Result">
+          <ScalarProperty Name="datefrom" ColumnName="datefrom" />
+          <ScalarProperty Name="dateto" ColumnName="dateto" />
+          <ScalarProperty Name="datee" ColumnName="datee" />
+          <ScalarProperty Name="timee" ColumnName="timee" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Report_AttendanceByCatogery" FunctionName="DBMRCodeneWV2Model.Store.Report_AttendanceByCatogery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Report_AttendanceByCatogery_Result">
+          <ScalarProperty Name="datefrom" ColumnName="datefrom" />
+          <ScalarProperty Name="dateto" ColumnName="dateto" />
+          <ScalarProperty Name="datee" ColumnName="datee" />
+          <ScalarProperty Name="timee" ColumnName="timee" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Report_AttendanceByStudent" FunctionName="DBMRCodeneWV2Model.Store.Report_AttendanceByStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Report_AttendanceByStudent_Result">
+          <ScalarProperty Name="datefrom" ColumnName="datefrom" />
+          <ScalarProperty Name="dateto" ColumnName="dateto" />
+          <ScalarProperty Name="datee" ColumnName="datee" />
+          <ScalarProperty Name="timee" ColumnName="timee" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReportExpense" FunctionName="DBMRCodeneWV2Model.Store.ReportExpense">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ReportExpense_Result">
+          <ScalarProperty Name="ExpenseType_Name" ColumnName="ExpenseType_Name" />
+          <ScalarProperty Name="Expense_Date" ColumnName="Expense_Date" />
+          <ScalarProperty Name="Expense_Name" ColumnName="Expense_Name" />
+          <ScalarProperty Name="Expense_Details" ColumnName="Expense_Details" />
+          <ScalarProperty Name="Expense_Value" ColumnName="Expense_Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReportPayeed" FunctionName="DBMRCodeneWV2Model.Store.ReportPayeed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ReportPayeed_Result">
+          <ScalarProperty Name="StudentPay_Date" ColumnName="StudentPay_Date" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="StudentPay_PayStatus" ColumnName="StudentPay_PayStatus" />
+          <ScalarProperty Name="StudentPay_catcost" ColumnName="StudentPay_catcost" />
+          <ScalarProperty Name="StudentPay_discount" ColumnName="StudentPay_discount" />
+          <ScalarProperty Name="StudentPay_notesscost" ColumnName="StudentPay_notesscost" />
+          <ScalarProperty Name="StudentPay_Netvalue" ColumnName="StudentPay_Netvalue" />
+          <ScalarProperty Name="StudentPay_Paid" ColumnName="StudentPay_Paid" />
+          <ScalarProperty Name="StudentPay_Remaining" ColumnName="StudentPay_Remaining" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ReportStuFile" FunctionName="DBMRCodeneWV2Model.Store.ReportStuFile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ReportStuFile_Result">
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="تاريخ_الاختبار" ColumnName="تاريخ الاختبار" />
+          <ScalarProperty Name="اسم_الاختبار" ColumnName="اسم الاختبار" />
+          <ScalarProperty Name="الدرجة" ColumnName="الدرجة" />
+          <ScalarProperty Name="الحالة" ColumnName="الحالة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RPT_ReportStuFile" FunctionName="DBMRCodeneWV2Model.Store.RPT_ReportStuFile">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.RPT_ReportStuFile_Result">
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="ExamResult_date" ColumnName="ExamResult_date" />
+          <ScalarProperty Name="Exams_Name" ColumnName="Exams_Name" />
+          <ScalarProperty Name="ExamResult_degree" ColumnName="ExamResult_degree" />
+          <ScalarProperty Name="ExamResult_Status" ColumnName="ExamResult_Status" />
+          <ScalarProperty Name="Exams_highdegree" ColumnName="Exams_highdegree" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_AddCashData" FunctionName="DBMRCodeneWV2Model.Store.Sa_AddCashData" />
+    <FunctionImportMapping FunctionImportName="Sa_AddJob" FunctionName="DBMRCodeneWV2Model.Store.Sa_AddJob" />
+    <FunctionImportMapping FunctionImportName="Sa_CheckIfCashNameExist" FunctionName="DBMRCodeneWV2Model.Store.Sa_CheckIfCashNameExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_CheckIfCashNameExist_Result">
+          <ScalarProperty Name="Cash_ID" ColumnName="Cash_ID" />
+          <ScalarProperty Name="Cash_Name" ColumnName="Cash_Name" />
+          <ScalarProperty Name="Cash_CurrentValue" ColumnName="Cash_CurrentValue" />
+          <ScalarProperty Name="Cash_AccountID" ColumnName="Cash_AccountID" />
+          <ScalarProperty Name="Cash_UserID" ColumnName="Cash_UserID" />
+          <ScalarProperty Name="Cash_DeleteStatus" ColumnName="Cash_DeleteStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_CheckIfJobNameExist" FunctionName="DBMRCodeneWV2Model.Store.Sa_CheckIfJobNameExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_CheckIfJobNameExist_Result">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Job_name" ColumnName="Job_name" />
+          <ScalarProperty Name="powers" ColumnName="powers" />
+          <ScalarProperty Name="Job_DeleteStatus" ColumnName="Job_DeleteStatus" />
+          <ScalarProperty Name="Job_UserID" ColumnName="Job_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_CheckIfStageExist" FunctionName="DBMRCodeneWV2Model.Store.Sa_CheckIfStageExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_CheckIfStageExist_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="Stage_Name" ColumnName="Stage_Name" />
+          <ScalarProperty Name="Stage_Deletestatus" ColumnName="Stage_Deletestatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_CheckIfUpdateCashNameExist" FunctionName="DBMRCodeneWV2Model.Store.Sa_CheckIfUpdateCashNameExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_CheckIfUpdateCashNameExist_Result">
+          <ScalarProperty Name="Cash_ID" ColumnName="Cash_ID" />
+          <ScalarProperty Name="Cash_Name" ColumnName="Cash_Name" />
+          <ScalarProperty Name="Cash_CurrentValue" ColumnName="Cash_CurrentValue" />
+          <ScalarProperty Name="Cash_AccountID" ColumnName="Cash_AccountID" />
+          <ScalarProperty Name="Cash_UserID" ColumnName="Cash_UserID" />
+          <ScalarProperty Name="Cash_DeleteStatus" ColumnName="Cash_DeleteStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_CheckIfUpdateJobExist" FunctionName="DBMRCodeneWV2Model.Store.Sa_CheckIfUpdateJobExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_CheckIfUpdateJobExist_Result">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Job_name" ColumnName="Job_name" />
+          <ScalarProperty Name="powers" ColumnName="powers" />
+          <ScalarProperty Name="Job_DeleteStatus" ColumnName="Job_DeleteStatus" />
+          <ScalarProperty Name="Job_UserID" ColumnName="Job_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_CheckIfUpdateUserExist" FunctionName="DBMRCodeneWV2Model.Store.Sa_CheckIfUpdateUserExist">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_CheckIfUpdateUserExist_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="UserIDD" ColumnName="UserIDD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_DeleteCashData" FunctionName="DBMRCodeneWV2Model.Store.Sa_DeleteCashData" />
+    <FunctionImportMapping FunctionImportName="Sa_DeleteJob" FunctionName="DBMRCodeneWV2Model.Store.Sa_DeleteJob" />
+    <FunctionImportMapping FunctionImportName="Sa_EditJobName" FunctionName="DBMRCodeneWV2Model.Store.Sa_EditJobName" />
+    <FunctionImportMapping FunctionImportName="Sa_GetCashData" FunctionName="DBMRCodeneWV2Model.Store.Sa_GetCashData">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_GetCashData_Result">
+          <ScalarProperty Name="Cash_ID" ColumnName="Cash_ID" />
+          <ScalarProperty Name="اسم_الخزنة" ColumnName="اسم الخزنة" />
+          <ScalarProperty Name="الرصيد_الافتتاحي" ColumnName="الرصيد الافتتاحي" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_GetJobs" FunctionName="DBMRCodeneWV2Model.Store.Sa_GetJobs">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_GetJobs_Result">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="اسم_الوظيفة" ColumnName="اسم الوظيفة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sa_Login_Proc" FunctionName="DBMRCodeneWV2Model.Store.sa_Login_Proc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.sa_Login_Proc_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="UserIDD" ColumnName="UserIDD" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_SearchCash" FunctionName="DBMRCodeneWV2Model.Store.Sa_SearchCash">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_SearchCash_Result">
+          <ScalarProperty Name="Cash_ID" ColumnName="Cash_ID" />
+          <ScalarProperty Name="اسم_الخزنة" ColumnName="اسم الخزنة" />
+          <ScalarProperty Name="الرصيد_الافتتاحي" ColumnName="الرصيد الافتتاحي" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_SearchJob" FunctionName="DBMRCodeneWV2Model.Store.Sa_SearchJob">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_SearchJob_Result">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="اسم_الوظيفة" ColumnName="اسم الوظيفة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_SearchUser" FunctionName="DBMRCodeneWV2Model.Store.Sa_SearchUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_SearchUser_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="اسم_المستخدم" ColumnName="اسم المستخدم" />
+          <ScalarProperty Name="كلمة_المرور" ColumnName="كلمة المرور" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_ShowAllUsers" FunctionName="DBMRCodeneWV2Model.Store.Sa_ShowAllUsers">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Sa_ShowAllUsers_Result">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="اسم_المستخدم" ColumnName="اسم المستخدم" />
+          <ScalarProperty Name="كلمة_المرور" ColumnName="كلمة المرور" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Sa_UpdateCashData" FunctionName="DBMRCodeneWV2Model.Store.Sa_UpdateCashData" />
+    <FunctionImportMapping FunctionImportName="SearchExam" FunctionName="DBMRCodeneWV2Model.Store.SearchExam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.SearchExam_Result">
+          <ScalarProperty Name="Exams_ID" ColumnName="Exams_ID" />
+          <ScalarProperty Name="اسم_الاختبار" ColumnName="اسم الاختبار" />
+          <ScalarProperty Name="الدرجة_العظمي" ColumnName="الدرجة العظمي" />
+          <ScalarProperty Name="الدرجة_الصغري" ColumnName="الدرجة الصغري" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="searchResult" FunctionName="DBMRCodeneWV2Model.Store.searchResult">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.searchResult_Result">
+          <ScalarProperty Name="ExamResult_ID" ColumnName="ExamResult_ID" />
+          <ScalarProperty Name="التاريخ" ColumnName="التاريخ" />
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="الاختبار" ColumnName="الاختبار" />
+          <ScalarProperty Name="الدرجة" ColumnName="الدرجة" />
+          <ScalarProperty Name="الحالة" ColumnName="الحالة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Searchstage" FunctionName="DBMRCodeneWV2Model.Store.Searchstage">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.Searchstage_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="اسم_المرحلة" ColumnName="اسم المرحلة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="searchStudent" FunctionName="DBMRCodeneWV2Model.Store.searchStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.searchStudent_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="المرحلة" ColumnName="المرحلة" />
+          <ScalarProperty Name="الصف" ColumnName="الصف" />
+          <ScalarProperty Name="المجموعة" ColumnName="المجموعة" />
+          <ScalarProperty Name="العنوان" ColumnName="العنوان" />
+          <ScalarProperty Name="تليفون_الطالب" ColumnName="تليفون الطالب" />
+          <ScalarProperty Name="تليفون_ولي_الامر" ColumnName="تليفون ولي الامر" />
+          <ScalarProperty Name="الملاحظات" ColumnName="الملاحظات" />
+          <ScalarProperty Name="المدرسة" ColumnName="المدرسة" />
+          <ScalarProperty Name="الكود" ColumnName="الكود" />
+          <ScalarProperty Name="حالة_الدفع" ColumnName="حالة الدفع" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SearchSubject" FunctionName="DBMRCodeneWV2Model.Store.SearchSubject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.SearchSubject_Result">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="اسم_المادة" ColumnName="اسم المادة" />
+          <ScalarProperty Name="الملاحظات" ColumnName="الملاحظات" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="select_Employee" FunctionName="DBMRCodeneWV2Model.Store.select_Employee">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.select_Employee_Result">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectAttendance" FunctionName="DBMRCodeneWV2Model.Store.selectAttendance">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectAttendance_Result">
+          <ScalarProperty Name="datee" ColumnName="datee" />
+          <ScalarProperty Name="timee" ColumnName="timee" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectAttendEmp" FunctionName="DBMRCodeneWV2Model.Store.selectAttendEmp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectAttendEmp_Result">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectcatByStuid" FunctionName="DBMRCodeneWV2Model.Store.selectcatByStuid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectcatByStuid_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectcatfprcombox" FunctionName="DBMRCodeneWV2Model.Store.selectcatfprcombox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectcatfprcombox_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectDateOfCat" FunctionName="DBMRCodeneWV2Model.Store.SelectDateOfCat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.SelectDateOfCat_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="CatogaryDetails_date" ColumnName="CatogaryDetails_date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectEmpForCombox" FunctionName="DBMRCodeneWV2Model.Store.selectEmpForCombox">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectEmpForCombox_Result">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectLeaveEmp" FunctionName="DBMRCodeneWV2Model.Store.selectLeaveEmp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectLeaveEmp_Result">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectNotPaydBycat" FunctionName="DBMRCodeneWV2Model.Store.selectNotPaydBycat">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.selectNotPaydBycat_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectStudentReportAccount" FunctionName="DBMRCodeneWV2Model.Store.SelectStudentReportAccount">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.SelectStudentReportAccount_Result">
+          <ScalarProperty Name="RowID" ColumnName="RowID" />
+          <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="statusd" ColumnName="statusd" />
+          <ScalarProperty Name="total" ColumnName="total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowAbcenseStude" FunctionName="DBMRCodeneWV2Model.Store.ShowAbcenseStude">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowAbcenseStude_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Phone1" ColumnName="Student_Phone1" />
+          <ScalarProperty Name="Student_Phone2" ColumnName="Student_Phone2" />
+          <ScalarProperty Name="CatogaryDetails_date" ColumnName="CatogaryDetails_date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowAbcenseStudeForStudent" FunctionName="DBMRCodeneWV2Model.Store.ShowAbcenseStudeForStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowAbcenseStudeForStudent_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Student_Phone1" ColumnName="Student_Phone1" />
+          <ScalarProperty Name="Student_Phone2" ColumnName="Student_Phone2" />
+          <ScalarProperty Name="CatogaryDetails_date" ColumnName="CatogaryDetails_date" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowAbcenseStudeForStudentt" FunctionName="DBMRCodeneWV2Model.Store.ShowAbcenseStudeForStudentt">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowAbcenseStudeForStudentt_Result">
+          <ScalarProperty Name="datefrom" ColumnName="datefrom" />
+          <ScalarProperty Name="dateto" ColumnName="dateto" />
+          <ScalarProperty Name="datee" ColumnName="datee" />
+          <ScalarProperty Name="timee" ColumnName="timee" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Catogary_Name" ColumnName="Catogary_Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowAttendanceByCatogery" FunctionName="DBMRCodeneWV2Model.Store.ShowAttendanceByCatogery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowAttendanceByCatogery_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="datee" ColumnName="datee" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="showcatogery" FunctionName="DBMRCodeneWV2Model.Store.showcatogery">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.showcatogery_Result">
+          <ScalarProperty Name="Catogary_ID" ColumnName="Catogary_ID" />
+          <ScalarProperty Name="اسم_الجموعة" ColumnName="اسم الجموعة" />
+          <ScalarProperty Name="المرحلة" ColumnName="المرحلة" />
+          <ScalarProperty Name="الصف" ColumnName="الصف" />
+          <ScalarProperty Name="التكلفة" ColumnName="التكلفة" />
+          <ScalarProperty Name="المادة" ColumnName="المادة" />
+          <ScalarProperty Name="المدرس" ColumnName="المدرس" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="showcatogerystudent" FunctionName="DBMRCodeneWV2Model.Store.showcatogerystudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.showcatogerystudent_Result">
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="اسم_المجموعة" ColumnName="اسم المجموعة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="showExam" FunctionName="DBMRCodeneWV2Model.Store.showExam">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.showExam_Result">
+          <ScalarProperty Name="Exams_ID" ColumnName="Exams_ID" />
+          <ScalarProperty Name="اسم_الاختبار" ColumnName="اسم الاختبار" />
+          <ScalarProperty Name="الدرجة_العظمي" ColumnName="الدرجة العظمي" />
+          <ScalarProperty Name="الدرجة_الصغري" ColumnName="الدرجة الصغري" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowNotAttendStude" FunctionName="DBMRCodeneWV2Model.Store.ShowNotAttendStude">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowNotAttendStude_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="Student_Name" ColumnName="Student_Name" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowSection" FunctionName="DBMRCodeneWV2Model.Store.ShowSection">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowSection_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="اسم_الصف" ColumnName="اسم الصف" />
+          <ScalarProperty Name="المرحلة" ColumnName="المرحلة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="showSections" FunctionName="DBMRCodeneWV2Model.Store.showSections">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.showSections_Result">
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+          <ScalarProperty Name="اسم_الصف" ColumnName="اسم الصف" />
+          <ScalarProperty Name="المرحلة" ColumnName="المرحلة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="showStages" FunctionName="DBMRCodeneWV2Model.Store.showStages">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.showStages_Result">
+          <ScalarProperty Name="Stage_ID" ColumnName="Stage_ID" />
+          <ScalarProperty Name="اسم_المرحلة" ColumnName="اسم المرحلة" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ShowStudent" FunctionName="DBMRCodeneWV2Model.Store.ShowStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.ShowStudent_Result">
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="اسم_الطالب" ColumnName="اسم الطالب" />
+          <ScalarProperty Name="المرحلة" ColumnName="المرحلة" />
+          <ScalarProperty Name="الصف" ColumnName="الصف" />
+          <ScalarProperty Name="المجموعة" ColumnName="المجموعة" />
+          <ScalarProperty Name="العنوان" ColumnName="العنوان" />
+          <ScalarProperty Name="تليفون_الطالب" ColumnName="تليفون الطالب" />
+          <ScalarProperty Name="تليفون_ولي_الامر" ColumnName="تليفون ولي الامر" />
+          <ScalarProperty Name="الملاحظات" ColumnName="الملاحظات" />
+          <ScalarProperty Name="المدرسة" ColumnName="المدرسة" />
+          <ScalarProperty Name="الكود" ColumnName="الكود" />
+          <ScalarProperty Name="حالة_الدفع" ColumnName="حالة الدفع" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="showSubject" FunctionName="DBMRCodeneWV2Model.Store.showSubject">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.showSubject_Result">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="اسم_المادة" ColumnName="اسم المادة" />
+          <ScalarProperty Name="الملاحظات" ColumnName="الملاحظات" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UpdateCatogaryDetails" FunctionName="DBMRCodeneWV2Model.Store.UpdateCatogaryDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateCatogaryDetailsNew" FunctionName="DBMRCodeneWV2Model.Store.UpdateCatogaryDetailsNew" />
+    <FunctionImportMapping FunctionImportName="Updatecatogeries" FunctionName="DBMRCodeneWV2Model.Store.Updatecatogeries" />
+    <FunctionImportMapping FunctionImportName="UpdateEmpolyee" FunctionName="DBMRCodeneWV2Model.Store.UpdateEmpolyee" />
+    <FunctionImportMapping FunctionImportName="UpdateExam" FunctionName="DBMRCodeneWV2Model.Store.UpdateExam" />
+    <FunctionImportMapping FunctionImportName="UpdateSection" FunctionName="DBMRCodeneWV2Model.Store.UpdateSection" />
+    <FunctionImportMapping FunctionImportName="UpdateStages" FunctionName="DBMRCodeneWV2Model.Store.UpdateStages" />
+    <FunctionImportMapping FunctionImportName="UpdateStudent" FunctionName="DBMRCodeneWV2Model.Store.UpdateStudent" />
+    <FunctionImportMapping FunctionImportName="updateStudentcat" FunctionName="DBMRCodeneWV2Model.Store.updateStudentcat" />
+    <FunctionImportMapping FunctionImportName="updatetSubject" FunctionName="DBMRCodeneWV2Model.Store.updatetSubject" />
+    <FunctionImportMapping FunctionImportName="UPDATEUSER" FunctionName="DBMRCodeneWV2Model.Store.UPDATEUSER" />
+    <FunctionImportMapping FunctionImportName="VertifyEmpBySSNandName" FunctionName="DBMRCodeneWV2Model.Store.VertifyEmpBySSNandName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.VertifyEmpBySSNandName_Result">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Employee_Name" ColumnName="Employee_Name" />
+          <ScalarProperty Name="Employee_IPhone" ColumnName="Employee_IPhone" />
+          <ScalarProperty Name="Employee_Issn" ColumnName="Employee_Issn" />
+          <ScalarProperty Name="Employee_IAddress" ColumnName="Employee_IAddress" />
+          <ScalarProperty Name="Employee_IUser_ID" ColumnName="Employee_IUser_ID" />
+          <ScalarProperty Name="Employee_IJob_ID" ColumnName="Employee_IJob_ID" />
+          <ScalarProperty Name="Employee_salary" ColumnName="Employee_salary" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="Employee_UserID" ColumnName="Employee_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VertifyJob" FunctionName="DBMRCodeneWV2Model.Store.VertifyJob">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.VertifyJob_Result">
+          <ScalarProperty Name="Job_ID" ColumnName="Job_ID" />
+          <ScalarProperty Name="Job_name" ColumnName="Job_name" />
+          <ScalarProperty Name="powers" ColumnName="powers" />
+          <ScalarProperty Name="Job_DeleteStatus" ColumnName="Job_DeleteStatus" />
+          <ScalarProperty Name="Job_UserID" ColumnName="Job_UserID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VertifyPerUser" FunctionName="DBMRCodeneWV2Model.Store.VertifyPerUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.VertifyPerUser_Result">
+          <ScalarProperty Name="UserPage_ID" ColumnName="UserPage_ID" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Page_ID" ColumnName="Page_ID" />
+          <ScalarProperty Name="UserPage_USerID" ColumnName="UserPage_USerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="VertifyUser" FunctionName="DBMRCodeneWV2Model.Store.VertifyUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DBMRCodeneWV2Model.VertifyUser_Result">
+          <ScalarProperty Name="Page_ID" ColumnName="Page_ID" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="DeleteStatus" ColumnName="DeleteStatus" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

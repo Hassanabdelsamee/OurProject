@@ -1,0 +1,1954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMRCodeneWV2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cash">
+    <Key>
+      <PropertyRef Name="Cash_ID" />
+    </Key>
+    <Property Name="Cash_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cash_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Cash_CurrentValue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Cash_AccountID" Type="Int32" />
+    <Property Name="Cash_UserID" Type="Int32" />
+    <Property Name="Cash_DeleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="CatogaryDetail">
+    <Key>
+      <PropertyRef Name="CatogaryDetails_ID" />
+    </Key>
+    <Property Name="CatogaryDetails_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CatogaryDetails_CatogeryID" Type="Int32" />
+    <Property Name="CatogaryDetails_Day" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CatogaryDetails_Time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CatogaryDetails_date" Type="DateTime" Precision="7" />
+    <Property Name="CatogaryDetails_Deletestatus" Type="Boolean" />
+    <NavigationProperty Name="Catogary" Relationship="Self.FK_CatogaryDetails_Catogarys" FromRole="CatogaryDetails" ToRole="Catogarys" />
+  </EntityType>
+  <EntityType Name="Catogary">
+    <Key>
+      <PropertyRef Name="Catogary_ID" />
+    </Key>
+    <Property Name="Catogary_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Catogary_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Catogary_StageID" Type="Int32" />
+    <Property Name="Catogary_SectionID" Type="Int32" />
+    <Property Name="Catogary_Cost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Catogary_SubjectID" Type="Int32" />
+    <Property Name="Catogary_Empid" Type="Int32" />
+    <Property Name="Catogary_DOC" Type="DateTime" Precision="7" />
+    <Property Name="Catogary_Deletestatus" Type="Boolean" />
+    <Property Name="Catogary_PayedWays" Type="Boolean" />
+    <NavigationProperty Name="CatogaryDetails" Relationship="Self.FK_CatogaryDetails_Catogarys" FromRole="Catogarys" ToRole="CatogaryDetails" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_Catogarys_Subjects" FromRole="Catogarys" ToRole="Subjects" />
+    <NavigationProperty Name="StudentCats" Relationship="Self.FK_StudentCats_Catogarys" FromRole="Catogarys" ToRole="StudentCats" />
+  </EntityType>
+  <EntityType Name="EmpAttendance">
+    <Key>
+      <PropertyRef Name="EmpAttend_ID" />
+    </Key>
+    <Property Name="EmpAttend_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpAttend_Date" Type="DateTime" Precision="7" />
+    <Property Name="EmpAttend_EmpID" Type="Int32" />
+    <Property Name="EmpAttend_Deletestatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="EmpLeaf">
+    <Key>
+      <PropertyRef Name="EmpLeave_ID" />
+    </Key>
+    <Property Name="EmpLeave_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpLeave_Date" Type="DateTime" Precision="7" />
+    <Property Name="EmpLeave_EmpId" Type="Int32" />
+    <Property Name="EmpLeave_DeleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Employe">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_IPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Issn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_IAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_IUser_ID" Type="Int32" />
+    <Property Name="Employee_IJob_ID" Type="Int32" />
+    <Property Name="Employee_salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteStatus" Type="Boolean" />
+    <Property Name="Employee_UserID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ExamResult">
+    <Key>
+      <PropertyRef Name="ExamResult_ID" />
+    </Key>
+    <Property Name="ExamResult_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExamResult_StuID" Type="Int32" />
+    <Property Name="ExamResult_Examid" Type="Int32" />
+    <Property Name="ExamResult_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExamResult_degree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ExamResult_date" Type="DateTime" Precision="7" />
+    <Property Name="ExamResult_deletestatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="Exams_ID" />
+    </Key>
+    <Property Name="Exams_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Exams_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Exams_highdegree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Exams_Lowdegree" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Exams_deleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="Expense_ID" />
+    </Key>
+    <Property Name="Expense_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Expense_ExpenseTypeID" Type="Int32" />
+    <Property Name="Expense_Date" Type="DateTime" Precision="7" />
+    <Property Name="Expense_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Expense_Value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Expense_Details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Expense_WarehouseID" Type="Int32" />
+    <Property Name="Expense_UserID" Type="Int32" />
+    <Property Name="Expense_DeleteStatus" Type="Boolean" />
+    <Property Name="Expense_CashID" Type="Int32" />
+    <Property Name="Expense_BankID" Type="Int32" />
+    <Property Name="Expense_CheckNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ExpenseType" Relationship="Self.FK_Expense_ExpenseType" FromRole="Expense" ToRole="ExpenseType" />
+  </EntityType>
+  <EntityType Name="ExpenseType">
+    <Key>
+      <PropertyRef Name="ExpenseType_ID" />
+    </Key>
+    <Property Name="ExpenseType_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpenseType_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ExpenseType_DeleteStatus" Type="Boolean" />
+    <Property Name="ExpenseType_UserID" Type="Int32" />
+    <NavigationProperty Name="Expenses" Relationship="Self.FK_Expense_ExpenseType" FromRole="ExpenseType" ToRole="Expense" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="Job_ID" />
+    </Key>
+    <Property Name="Job_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Job_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="powers" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Job_DeleteStatus" Type="Boolean" Nullable="false" />
+    <Property Name="Job_UserID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="NewRegistration">
+    <Key>
+      <PropertyRef Name="NewRegistration_ID" />
+    </Key>
+    <Property Name="NewRegistration_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewRegistration_Date" Type="DateTime" Precision="7" />
+    <Property Name="NewRegistration_StuID" Type="Int32" />
+    <Property Name="NewRegistration_Totalvalue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Netvalue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Paidvalue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_Remaining" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="NewRegistration_CashID" Type="Int32" />
+    <Property Name="NewRegistration_DeleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="OPenningValue">
+    <Key>
+      <PropertyRef Name="OPenningValues_ID" />
+    </Key>
+    <Property Name="OPenningValues_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OPenningValues_AccountID" Type="Int32" />
+    <Property Name="OPenningValues_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OPenningValues_Debit" Type="Boolean" />
+    <Property Name="OPenningValues_Credit" Type="Boolean" />
+    <Property Name="OPenningValues_value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OPenningValues_Date" Type="DateTime" Precision="7" />
+    <Property Name="OPenningValues_DeleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="OperationsLog">
+    <Key>
+      <PropertyRef Name="OperationLog_ID" />
+    </Key>
+    <Property Name="OperationLog_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OperationLog_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OperationLog_User_ID" Type="Int32" />
+    <Property Name="OperationLog_Date" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="OperationLog_TransactionTypeID" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="Self.FK_OperationsLog_Users1" FromRole="OperationsLog" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Page">
+    <Key>
+      <PropertyRef Name="Page_ID" />
+    </Key>
+    <Property Name="Page_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DeleteStatus" Type="Boolean" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserPermissions" Relationship="Self.FK_UserPermission_Pages" FromRole="Pages" ToRole="UserPermission" />
+  </EntityType>
+  <EntityType Name="PayCatExpnce">
+    <Key>
+      <PropertyRef Name="PayCatExpnces_ID" />
+    </Key>
+    <Property Name="PayCatExpnces_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PayCatExpnces_StuID" Type="Int32" />
+    <Property Name="PayCatExpnces_CatID" Type="Int32" />
+    <Property Name="PayCatExpnces_Discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PayCatExpnces_Value" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PayCatExpnces_NetValue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PayCatExpnces_Nots" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PayCatExpnces_CashID" Type="Int32" />
+    <Property Name="PayCatExpnces_DOP" Type="DateTime" Precision="7" />
+    <Property Name="PayCatExpnces_DeleteStatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="Section_ID" />
+    </Key>
+    <Property Name="Section_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Section_StageID" Type="Int32" />
+    <Property Name="Section_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Section_Deletestatus" Type="Boolean" />
+    <NavigationProperty Name="Stage" Relationship="Self.FK_Sections_Stages" FromRole="Sections" ToRole="Stages" />
+  </EntityType>
+  <EntityType Name="Stage">
+    <Key>
+      <PropertyRef Name="Stage_ID" />
+    </Key>
+    <Property Name="Stage_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Stage_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Stage_Deletestatus" Type="Boolean" />
+    <NavigationProperty Name="Sections" Relationship="Self.FK_Sections_Stages" FromRole="Stages" ToRole="Sections" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Sections" FromRole="Stages" ToRole="Students" />
+    <NavigationProperty Name="Students1" Relationship="Self.FK_Students_Stages" FromRole="Stages" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="StudentAttendance">
+    <Key>
+      <PropertyRef Name="StudentAttend_ID" />
+    </Key>
+    <Property Name="StudentAttend_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentAttend_Date" Type="DateTime" Precision="7" />
+    <Property Name="StudentAttend_StuID" Type="Int32" />
+    <Property Name="StudentAttend_CatID" Type="Int32" />
+    <Property Name="StudentAttend_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentAttend_Deletestatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="StudentCat">
+    <Key>
+      <PropertyRef Name="StudentCat_ID" />
+    </Key>
+    <Property Name="StudentCat_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentCat_StuID" Type="Int32" />
+    <Property Name="StudentCat_CatID" Type="Int32" />
+    <Property Name="StudentCat_date" Type="DateTime" Precision="7" />
+    <Property Name="StudentCat_deletestatus" Type="Boolean" />
+    <NavigationProperty Name="Catogary" Relationship="Self.FK_StudentCats_Catogarys" FromRole="StudentCats" ToRole="Catogarys" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_StudentCats_Students" FromRole="StudentCats" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="StudentLeaf">
+    <Key>
+      <PropertyRef Name="StudentLeave_ID" />
+    </Key>
+    <Property Name="StudentLeave_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentLeave_date" Type="DateTime" Precision="7" />
+    <Property Name="StudentLeave_StuID" Type="Int32" />
+    <Property Name="StudentLeave_Deletestatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="StudentPaye">
+    <Key>
+      <PropertyRef Name="StudentPayes_ID" />
+    </Key>
+    <Property Name="StudentPayes_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentPayes_StuID" Type="Int32" />
+    <Property Name="StudentPayes_CatID" Type="Int32" />
+    <Property Name="StudentPayes_Date" Type="DateTime" Precision="7" />
+    <Property Name="StudentPayes_Totalvalue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPayes_CatCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPayes_NotesEXp" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPayes_Netvalue" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StudentPayes_PayStuType" Type="Int32" />
+    <Property Name="StudentPayes_PaysType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentPayes_CashID" Type="Int32" />
+    <Property Name="StudentPayes_Detestatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="StudentPaysNew">
+    <Key>
+      <PropertyRef Name="StudentPay_ID" />
+    </Key>
+    <Property Name="StudentPay_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentPay_catid" Type="Int32" />
+    <Property Name="StudentPay_stuid" Type="Int32" />
+    <Property Name="StudentPay_Date" Type="DateTime" Precision="7" />
+    <Property Name="StudentPay_PayStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StudentPay_catcost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_discount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_notesscost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_Netvalue" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_Paid" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_Remaining" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentPay_cashid" Type="Int32" />
+    <Property Name="StudentPay_Deletestatus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="StudentReturn">
+    <Key>
+      <PropertyRef Name="StudentReturn_ID" />
+    </Key>
+    <Property Name="StudentReturn_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentReturn_Date" Type="DateTime" Precision="7" />
+    <Property Name="StudentReturn_StuID" Type="Int32" />
+    <Property Name="StudentReturn_CashID" Type="Int32" />
+    <Property Name="StudentReturn_Remaining" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="StudentReturn_Satus" Type="Boolean" />
+    <Property Name="StudentReturn_DeletStaus" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Student_ID" />
+    </Key>
+    <Property Name="Student_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Student_StageID" Type="Int32" />
+    <Property Name="Student_SectionID" Type="Int32" />
+    <Property Name="Student_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_School" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_Phone1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_Phone2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Student_Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_DeleteStatus" Type="Boolean" />
+    <Property Name="Student_Barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Student_CatID" Type="Int32" />
+    <Property Name="Student_Payedstatus" Type="Int32" />
+    <NavigationProperty Name="Stage" Relationship="Self.FK_Students_Sections" FromRole="Students" ToRole="Stages" />
+    <NavigationProperty Name="Stage1" Relationship="Self.FK_Students_Stages" FromRole="Students" ToRole="Stages" />
+    <NavigationProperty Name="StudentCats" Relationship="Self.FK_StudentCats_Students" FromRole="Students" ToRole="StudentCats" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Subject_Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Subject_Deletestatus" Type="Boolean" />
+    <NavigationProperty Name="Catogarys" Relationship="Self.FK_Catogarys_Subjects" FromRole="Subjects" ToRole="Catogarys" />
+  </EntityType>
+  <EntityType Name="UserPermission">
+    <Key>
+      <PropertyRef Name="UserPage_ID" />
+    </Key>
+    <Property Name="UserPage_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="Page_ID" Type="Int32" Nullable="false" />
+    <Property Name="UserPage_USerID" Type="Int32" />
+    <NavigationProperty Name="Page" Relationship="Self.FK_UserPermission_Pages" FromRole="UserPermission" ToRole="Pages" />
+    <NavigationProperty Name="User" Relationship="Self.FK_UserPermission_Users" FromRole="UserPermission" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DeleteStatus" Type="Boolean" Nullable="false" />
+    <Property Name="UserIDD" Type="Int32" />
+    <NavigationProperty Name="OperationsLogs" Relationship="Self.FK_OperationsLog_Users1" FromRole="Users" ToRole="OperationsLog" />
+    <NavigationProperty Name="UserPermissions" Relationship="Self.FK_UserPermission_Users" FromRole="Users" ToRole="UserPermission" />
+  </EntityType>
+  <Association Name="FK_CatogaryDetails_Catogarys">
+    <End Role="Catogarys" Type="Self.Catogary" Multiplicity="0..1" />
+    <End Role="CatogaryDetails" Type="Self.CatogaryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catogarys">
+        <PropertyRef Name="Catogary_ID" />
+      </Principal>
+      <Dependent Role="CatogaryDetails">
+        <PropertyRef Name="CatogaryDetails_CatogeryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Catogarys_Subjects">
+    <End Role="Subjects" Type="Self.Subject" Multiplicity="0..1" />
+    <End Role="Catogarys" Type="Self.Catogary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subjects">
+        <PropertyRef Name="Subject_ID" />
+      </Principal>
+      <Dependent Role="Catogarys">
+        <PropertyRef Name="Catogary_SubjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCats_Catogarys">
+    <End Role="Catogarys" Type="Self.Catogary" Multiplicity="0..1" />
+    <End Role="StudentCats" Type="Self.StudentCat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Catogarys">
+        <PropertyRef Name="Catogary_ID" />
+      </Principal>
+      <Dependent Role="StudentCats">
+        <PropertyRef Name="StudentCat_CatID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expense_ExpenseType">
+    <End Role="ExpenseType" Type="Self.ExpenseType" Multiplicity="0..1" />
+    <End Role="Expense" Type="Self.Expense" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExpenseType">
+        <PropertyRef Name="ExpenseType_ID" />
+      </Principal>
+      <Dependent Role="Expense">
+        <PropertyRef Name="Expense_ExpenseTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OperationsLog_Users1">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="OperationsLog" Type="Self.OperationsLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="OperationsLog">
+        <PropertyRef Name="OperationLog_User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPermission_Pages">
+    <End Role="Pages" Type="Self.Page" Multiplicity="1" />
+    <End Role="UserPermission" Type="Self.UserPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pages">
+        <PropertyRef Name="Page_ID" />
+      </Principal>
+      <Dependent Role="UserPermission">
+        <PropertyRef Name="Page_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sections_Stages">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="Sections" Type="Self.Section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="Stage_ID" />
+      </Principal>
+      <Dependent Role="Sections">
+        <PropertyRef Name="Section_StageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Sections">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="Stage_ID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Student_StageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Stages">
+    <End Role="Stages" Type="Self.Stage" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stages">
+        <PropertyRef Name="Stage_ID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="Student_StageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentCats_Students">
+    <End Role="Students" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="StudentCats" Type="Self.StudentCat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="Student_ID" />
+      </Principal>
+      <Dependent Role="StudentCats">
+        <PropertyRef Name="StudentCat_StuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserPermission_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="UserPermission" Type="Self.UserPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="User_ID" />
+      </Principal>
+      <Dependent Role="UserPermission">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBMRCodeneWV2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cashes" EntityType="Self.Cash" />
+    <EntitySet Name="CatogaryDetails" EntityType="Self.CatogaryDetail" />
+    <EntitySet Name="Catogarys" EntityType="Self.Catogary" />
+    <EntitySet Name="EmpAttendances" EntityType="Self.EmpAttendance" />
+    <EntitySet Name="EmpLeaves" EntityType="Self.EmpLeaf" />
+    <EntitySet Name="Employes" EntityType="Self.Employe" />
+    <EntitySet Name="ExamResults" EntityType="Self.ExamResult" />
+    <EntitySet Name="Exams" EntityType="Self.Exam" />
+    <EntitySet Name="Expenses" EntityType="Self.Expense" />
+    <EntitySet Name="ExpenseTypes" EntityType="Self.ExpenseType" />
+    <EntitySet Name="Jobs" EntityType="Self.Job" />
+    <EntitySet Name="NewRegistrations" EntityType="Self.NewRegistration" />
+    <EntitySet Name="OPenningValues" EntityType="Self.OPenningValue" />
+    <EntitySet Name="OperationsLogs" EntityType="Self.OperationsLog" />
+    <EntitySet Name="Pages" EntityType="Self.Page" />
+    <EntitySet Name="PayCatExpnces" EntityType="Self.PayCatExpnce" />
+    <EntitySet Name="Sections" EntityType="Self.Section" />
+    <EntitySet Name="Stages" EntityType="Self.Stage" />
+    <EntitySet Name="StudentAttendances" EntityType="Self.StudentAttendance" />
+    <EntitySet Name="StudentCats" EntityType="Self.StudentCat" />
+    <EntitySet Name="StudentLeaves" EntityType="Self.StudentLeaf" />
+    <EntitySet Name="StudentPayes" EntityType="Self.StudentPaye" />
+    <EntitySet Name="StudentPaysNews" EntityType="Self.StudentPaysNew" />
+    <EntitySet Name="StudentReturns" EntityType="Self.StudentReturn" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Subjects" EntityType="Self.Subject" />
+    <EntitySet Name="UserPermissions" EntityType="Self.UserPermission" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK_CatogaryDetails_Catogarys" Association="Self.FK_CatogaryDetails_Catogarys">
+      <End Role="Catogarys" EntitySet="Catogarys" />
+      <End Role="CatogaryDetails" EntitySet="CatogaryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Catogarys_Subjects" Association="Self.FK_Catogarys_Subjects">
+      <End Role="Subjects" EntitySet="Subjects" />
+      <End Role="Catogarys" EntitySet="Catogarys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCats_Catogarys" Association="Self.FK_StudentCats_Catogarys">
+      <End Role="Catogarys" EntitySet="Catogarys" />
+      <End Role="StudentCats" EntitySet="StudentCats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expense_ExpenseType" Association="Self.FK_Expense_ExpenseType">
+      <End Role="ExpenseType" EntitySet="ExpenseTypes" />
+      <End Role="Expense" EntitySet="Expenses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OperationsLog_Users1" Association="Self.FK_OperationsLog_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="OperationsLog" EntitySet="OperationsLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPermission_Pages" Association="Self.FK_UserPermission_Pages">
+      <End Role="Pages" EntitySet="Pages" />
+      <End Role="UserPermission" EntitySet="UserPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sections_Stages" Association="Self.FK_Sections_Stages">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Sections" EntitySet="Sections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Sections" Association="Self.FK_Students_Sections">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Stages" Association="Self.FK_Students_Stages">
+      <End Role="Stages" EntitySet="Stages" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentCats_Students" Association="Self.FK_StudentCats_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="StudentCats" EntitySet="StudentCats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPermission_Users" Association="Self.FK_UserPermission_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserPermission" EntitySet="UserPermissions" />
+    </AssociationSet>
+    <FunctionImport Name="Add_Empatendance">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Add_EmpLeave">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Add_Studentatendance">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Add_StudentatendanceBybarcode">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="barcode" Mode="In" Type="String" />
+      <Parameter Name="status" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddAttendance">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="addCatogaryDetails">
+      <Parameter Name="day" Mode="In" Type="String" />
+      <Parameter Name="time" Mode="In" Type="String" />
+      <Parameter Name="datee" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="addCatogaryDetailsNew">
+      <Parameter Name="day" Mode="In" Type="String" />
+      <Parameter Name="time" Mode="In" Type="String" />
+      <Parameter Name="datee" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="addcatogeries">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+      <Parameter Name="sectionid" Mode="In" Type="Int32" />
+      <Parameter Name="cost" Mode="In" Type="Decimal" />
+      <Parameter Name="subid" Mode="In" Type="Int32" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+      <Parameter Name="payedway" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ADDEmpAttendance">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ADDEmpLEave">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddEmpolyee">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="ssn" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="user_id" Mode="In" Type="Int32" />
+      <Parameter Name="job_id" Mode="In" Type="Int32" />
+      <Parameter Name="salary" Mode="In" Type="Decimal" />
+      <Parameter Name="user_id2" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddExam">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="high" Mode="In" Type="Decimal" />
+      <Parameter Name="low" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="AddExamResults">
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+      <Parameter Name="examid" Mode="In" Type="Int32" />
+      <Parameter Name="degree" Mode="In" Type="Decimal" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="addPerUser">
+      <Parameter Name="userid" Mode="In" Type="Int32" />
+      <Parameter Name="pageid" Mode="In" Type="Int32" />
+      <Parameter Name="User_ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ADDRRegistration">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+      <Parameter Name="totalvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="Discount" Mode="In" Type="Decimal" />
+      <Parameter Name="Netvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="paid" Mode="In" Type="Decimal" />
+      <Parameter Name="remaining" Mode="In" Type="Decimal" />
+      <Parameter Name="cashid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddSection">
+      <Parameter Name="satageid" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddStages">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ADDStuAttendance">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddStudent">
+      <Parameter Name="satageid" Mode="In" Type="Int32" />
+      <Parameter Name="sectionid" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="school" Mode="In" Type="String" />
+      <Parameter Name="Phone1" Mode="In" Type="String" />
+      <Parameter Name="Phone2" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="barcode" Mode="In" Type="String" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddStudentBycode">
+      <Parameter Name="satageid" Mode="In" Type="Int32" />
+      <Parameter Name="sectionid" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="school" Mode="In" Type="String" />
+      <Parameter Name="Phone1" Mode="In" Type="String" />
+      <Parameter Name="Phone2" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="barcode" Mode="In" Type="String" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="addstudentcat">
+      <Parameter Name="Stuid" Mode="In" Type="Int32" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ADDStudentLEave">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ADDStudentPayes">
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="totalvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="cost" Mode="In" Type="Decimal" />
+      <Parameter Name="NotesEXp" Mode="In" Type="Decimal" />
+      <Parameter Name="Netvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="PayStuType" Mode="In" Type="Int32" />
+      <Parameter Name="PaysType" Mode="In" Type="String" />
+      <Parameter Name="cashid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddStudentPaysNew">
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Paystatus" Mode="In" Type="String" />
+      <Parameter Name="catcost" Mode="In" Type="Decimal" />
+      <Parameter Name="discount" Mode="In" Type="Decimal" />
+      <Parameter Name="notecost" Mode="In" Type="Decimal" />
+      <Parameter Name="Netvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="paid" Mode="In" Type="Decimal" />
+      <Parameter Name="Remaining" Mode="In" Type="Decimal" />
+      <Parameter Name="cashid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ADDStudentReturn">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="stuID" Mode="In" Type="Int32" />
+      <Parameter Name="cashID" Mode="In" Type="Int32" />
+      <Parameter Name="Remaining" Mode="In" Type="Decimal" />
+      <Parameter Name="satus" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ADDUSER">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="pasword" Mode="In" Type="String" />
+      <Parameter Name="UserIDD" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AllUsers" ReturnType="Collection(DBMRCodeneWV2Model.AllUsers_Result)" />
+    <FunctionImport Name="AllUsersNeew" ReturnType="Collection(DBMRCodeneWV2Model.AllUsersNeew_Result)" />
+    <FunctionImport Name="checkattendance" ReturnType="Collection(Int32)">
+      <Parameter Name="studid" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="checkCash">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkcatogery" ReturnType="Collection(DBMRCodeneWV2Model.checkcatogery_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkExam" ReturnType="Collection(DBMRCodeneWV2Model.checkExam_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkIfEmpIsAttendance" ReturnType="Collection(Int32)">
+      <Parameter Name="emp_id" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="checkIfEmpIsLeave" ReturnType="Collection(Int32)">
+      <Parameter Name="emp_id" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CheckIfExamExist" ReturnType="Collection(DBMRCodeneWV2Model.CheckIfExamExist_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CheckIfSectionExist" ReturnType="Collection(DBMRCodeneWV2Model.CheckIfSectionExist_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="CheckIfStageExist" ReturnType="Collection(DBMRCodeneWV2Model.CheckIfStageExist_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="checkIfStudentIsAttendance" ReturnType="Collection(Int32)">
+      <Parameter Name="Stu_ID" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkIfStudentIsAttendanceBybarcode" ReturnType="Collection(Int32)">
+      <Parameter Name="barcode" Mode="In" Type="String" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="CheckIfSubjectExist" ReturnType="Collection(DBMRCodeneWV2Model.CheckIfSubjectExist_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="checkJop" ReturnType="Collection(DBMRCodeneWV2Model.checkJop_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkSection" ReturnType="Collection(DBMRCodeneWV2Model.checkSection_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkstage" ReturnType="Collection(DBMRCodeneWV2Model.checkstage_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkStudent" ReturnType="Collection(DBMRCodeneWV2Model.checkStudent_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="checkSubject" ReturnType="Collection(DBMRCodeneWV2Model.checkSubject_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="countstudent" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="Deletecatogery">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="deleteemp">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteEmpolyee">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="user_id2" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteeStages">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteExam">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="deleteExamResults">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteForUpdate">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteForUpdateNew">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteJob">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeletePerUser">
+      <Parameter Name="user_id" Mode="In" Type="Int32" />
+      <Parameter Name="page_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteSection">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteStudent">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteSubject">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteUser">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DisplayEmpolyees" ReturnType="Collection(DBMRCodeneWV2Model.DisplayEmpolyees_Result)" />
+    <FunctionImport Name="DisplayJobs" ReturnType="Collection(DBMRCodeneWV2Model.DisplayJobs_Result)" />
+    <FunctionImport Name="ExamResult" ReturnType="Collection(DBMRCodeneWV2Model.ExamResult_Result)" />
+    <FunctionImport Name="GetAllOperation" ReturnType="Collection(DBMRCodeneWV2Model.GetAllOperation_Result)" />
+    <FunctionImport Name="GETcahFromCurrentvalue">
+      <Parameter Name="cashid" Mode="In" Type="Int32" />
+      <Parameter Name="warehouseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCatbystudentid" ReturnType="Collection(DBMRCodeneWV2Model.GetCatbystudentid_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCatcost" ReturnType="Collection(Decimal)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getCatogaryDetailsByID" ReturnType="Collection(DBMRCodeneWV2Model.getCatogaryDetailsByID_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetCatogeryDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetCatogeryDataForCombobox_Result)" />
+    <FunctionImport Name="GetCatogeryDataForComboboxbybarcode" ReturnType="Collection(DBMRCodeneWV2Model.GetCatogeryDataForComboboxbybarcode_Result)">
+      <Parameter Name="barcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetCatogeryDataForComboboxs" ReturnType="Collection(DBMRCodeneWV2Model.GetCatogeryDataForComboboxs_Result)" />
+    <FunctionImport Name="GetEmployeeyDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetEmployeeyDataForCombobox_Result)" />
+    <FunctionImport Name="GetExamDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetExamDataForCombobox_Result)" />
+    <FunctionImport Name="GetPageID" ReturnType="Collection(DBMRCodeneWV2Model.GetPageID_Result)">
+      <Parameter Name="str" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPaySatus" ReturnType="Collection(Int32)">
+      <Parameter Name="barcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetPaySatusbyid" ReturnType="Collection(Int32)">
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getsectionbybarcode" ReturnType="Collection(DBMRCodeneWV2Model.getsectionbybarcode_Result)">
+      <Parameter Name="barcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetSectionDataBystageid" ReturnType="Collection(DBMRCodeneWV2Model.GetSectionDataBystageid_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSectionDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetSectionDataForCombobox_Result)" />
+    <FunctionImport Name="GetSectionidDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetSectionidDataForCombobox_Result)">
+      <Parameter Name="secid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSpisficCatogeryDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetSpisficCatogeryDataForCombobox_Result)">
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+      <Parameter Name="secid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getstagebybarcode" ReturnType="Collection(DBMRCodeneWV2Model.getstagebybarcode_Result)">
+      <Parameter Name="barcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetStagesDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetStagesDataForCombobox_Result)" />
+    <FunctionImport Name="GetStagesidDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.GetStagesidDataForCombobox_Result)">
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getstudentbybarcode" ReturnType="Collection(DBMRCodeneWV2Model.getstudentbybarcode_Result)">
+      <Parameter Name="barcode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="getstudentbyCatid" ReturnType="Collection(DBMRCodeneWV2Model.getstudentbyCatid_Result)">
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+      <Parameter Name="secid" Mode="In" Type="Int32" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getstudentbyid" ReturnType="Collection(DBMRCodeneWV2Model.getstudentbyid_Result)">
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetstudentDataBycat" ReturnType="Collection(DBMRCodeneWV2Model.GetstudentDataBycat_Result)">
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetStudentFile" ReturnType="Collection(DBMRCodeneWV2Model.GetStudentFile_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="Studid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getstudentforcombobox" ReturnType="Collection(DBMRCodeneWV2Model.getstudentforcombobox_Result)">
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+      <Parameter Name="secid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetSubjectforcombox" ReturnType="Collection(DBMRCodeneWV2Model.GetSubjectforcombox_Result)" />
+    <FunctionImport Name="GetTeacherforcombox" ReturnType="Collection(DBMRCodeneWV2Model.GetTeacherforcombox_Result)" />
+    <FunctionImport Name="GetUsers" ReturnType="Collection(DBMRCodeneWV2Model.GetUsers_Result)" />
+    <FunctionImport Name="IB_GetCashDataForCombobox" ReturnType="Collection(DBMRCodeneWV2Model.IB_GetCashDataForCombobox_Result)" />
+    <FunctionImport Name="insert_PayCatExpnces">
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="discount" Mode="In" Type="Decimal" />
+      <Parameter Name="value" Mode="In" Type="Decimal" />
+      <Parameter Name="Netvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="nots" Mode="In" Type="String" />
+      <Parameter Name="cashid" Mode="In" Type="Int32" />
+      <Parameter Name="DOP" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="insertEmplLeave">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertStudentAttendance">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="studid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertStudentLeaves">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="studid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="insertSubject">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="nots" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="LastInsertUser" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="MAproc_CheckIfExpenseTypeExist" ReturnType="Collection(Int32)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_DeleteExpense">
+      <Parameter Name="ExpenseID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_DeleteExpenseType">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_InsertExpense">
+      <Parameter Name="ExpenseTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="Decimal" />
+      <Parameter Name="Details" Mode="In" Type="String" />
+      <Parameter Name="CashID" Mode="In" Type="Int32" />
+      <Parameter Name="BankID" Mode="In" Type="Int32" />
+      <Parameter Name="CheckNum" Mode="In" Type="String" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_InsertExpenseType">
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_InsertOperationLog">
+      <Parameter Name="DescriptionLog" Mode="In" Type="String" />
+      <Parameter Name="TransactionTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_SelectAllExpenseType" ReturnType="Collection(DBMRCodeneWV2Model.MAproc_SelectAllExpenseType_Result)" />
+    <FunctionImport Name="MAproc_SelectExpenseType" ReturnType="Collection(DBMRCodeneWV2Model.MAproc_SelectExpenseType_Result)" />
+    <FunctionImport Name="MAproc_SelectExpenseTypeByID" ReturnType="Collection(DBMRCodeneWV2Model.MAproc_SelectExpenseTypeByID_Result)">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_SelectExpenseTypeByName" ReturnType="Collection(DBMRCodeneWV2Model.MAproc_SelectExpenseTypeByName_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_SeleteAllExpenses" ReturnType="Collection(DBMRCodeneWV2Model.MAproc_SeleteAllExpenses_Result)" />
+    <FunctionImport Name="MAproc_SeleteExpenseByID" ReturnType="Collection(DBMRCodeneWV2Model.MAproc_SeleteExpenseByID_Result)">
+      <Parameter Name="ExpenseID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_UpdateExpense">
+      <Parameter Name="ExpenseID" Mode="In" Type="Int32" />
+      <Parameter Name="ExpenseTypeID" Mode="In" Type="Int32" />
+      <Parameter Name="Date" Mode="In" Type="DateTime" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Value" Mode="In" Type="Decimal" />
+      <Parameter Name="Details" Mode="In" Type="String" />
+      <Parameter Name="CashID" Mode="In" Type="Int32" />
+      <Parameter Name="BankID" Mode="In" Type="Int32" />
+      <Parameter Name="CheckNum" Mode="In" Type="String" />
+      <Parameter Name="WarehouseID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MAproc_UpdateExpenseType">
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PrintbarcodeForCatogery" ReturnType="Collection(DBMRCodeneWV2Model.PrintbarcodeForCatogery_Result)">
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="PrintStudentForCatogery" ReturnType="Collection(DBMRCodeneWV2Model.PrintStudentForCatogery_Result)">
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Report_Attendance" ReturnType="Collection(DBMRCodeneWV2Model.Report_Attendance_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Report_AttendanceByCatogery" ReturnType="Collection(DBMRCodeneWV2Model.Report_AttendanceByCatogery_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Report_AttendanceByStudent" ReturnType="Collection(DBMRCodeneWV2Model.Report_AttendanceByStudent_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ReportExpense" ReturnType="Collection(DBMRCodeneWV2Model.ReportExpense_Result)">
+      <Parameter Name="fromdate" Mode="In" Type="DateTime" />
+      <Parameter Name="todate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ReportPayeed" ReturnType="Collection(DBMRCodeneWV2Model.ReportPayeed_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="ReportStuFile" ReturnType="Collection(DBMRCodeneWV2Model.ReportStuFile_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RPT_ReportStuFile" ReturnType="Collection(DBMRCodeneWV2Model.RPT_ReportStuFile_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_AddCashData">
+      <Parameter Name="cashName" Mode="In" Type="String" />
+      <Parameter Name="openingvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_AddJob">
+      <Parameter Name="Job_name" Mode="In" Type="String" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_CheckIfCashNameExist" ReturnType="Collection(DBMRCodeneWV2Model.Sa_CheckIfCashNameExist_Result)">
+      <Parameter Name="cashName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_CheckIfJobNameExist" ReturnType="Collection(DBMRCodeneWV2Model.Sa_CheckIfJobNameExist_Result)">
+      <Parameter Name="jobName" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_CheckIfStageExist" ReturnType="Collection(DBMRCodeneWV2Model.Sa_CheckIfStageExist_Result)">
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_CheckIfUpdateCashNameExist" ReturnType="Collection(DBMRCodeneWV2Model.Sa_CheckIfUpdateCashNameExist_Result)">
+      <Parameter Name="cashName" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_CheckIfUpdateJobExist" ReturnType="Collection(DBMRCodeneWV2Model.Sa_CheckIfUpdateJobExist_Result)">
+      <Parameter Name="jobName" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_CheckIfUpdateUserExist" ReturnType="Collection(DBMRCodeneWV2Model.Sa_CheckIfUpdateUserExist_Result)">
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_DeleteCashData">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_DeleteJob">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_EditJobName">
+      <Parameter Name="jobName" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_GetCashData" ReturnType="Collection(DBMRCodeneWV2Model.Sa_GetCashData_Result)" />
+    <FunctionImport Name="Sa_GetJobs" ReturnType="Collection(DBMRCodeneWV2Model.Sa_GetJobs_Result)" />
+    <FunctionImport Name="sa_Login_Proc" ReturnType="Collection(DBMRCodeneWV2Model.sa_Login_Proc_Result)">
+      <Parameter Name="userName" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_SearchCash" ReturnType="Collection(DBMRCodeneWV2Model.Sa_SearchCash_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_SearchJob" ReturnType="Collection(DBMRCodeneWV2Model.Sa_SearchJob_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_SearchUser" ReturnType="Collection(DBMRCodeneWV2Model.Sa_SearchUser_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Sa_ShowAllUsers" ReturnType="Collection(DBMRCodeneWV2Model.Sa_ShowAllUsers_Result)" />
+    <FunctionImport Name="Sa_UpdateCashData">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="cashName" Mode="In" Type="String" />
+      <Parameter Name="openingvalue" Mode="In" Type="Decimal" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SearchExam" ReturnType="Collection(DBMRCodeneWV2Model.SearchExam_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="searchResult" ReturnType="Collection(DBMRCodeneWV2Model.searchResult_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Searchstage" ReturnType="Collection(DBMRCodeneWV2Model.Searchstage_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="searchStudent" ReturnType="Collection(DBMRCodeneWV2Model.searchStudent_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SearchSubject" ReturnType="Collection(DBMRCodeneWV2Model.SearchSubject_Result)">
+      <Parameter Name="word" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="select_Employee" ReturnType="Collection(DBMRCodeneWV2Model.select_Employee_Result)" />
+    <FunctionImport Name="selectAttendance" ReturnType="Collection(DBMRCodeneWV2Model.selectAttendance_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="selectAttendEmp" ReturnType="Collection(DBMRCodeneWV2Model.selectAttendEmp_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="selectcatByStuid" ReturnType="Collection(DBMRCodeneWV2Model.selectcatByStuid_Result)">
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="selectcatfprcombox" ReturnType="Collection(DBMRCodeneWV2Model.selectcatfprcombox_Result)">
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+      <Parameter Name="secid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SelectDateOfCat" ReturnType="Collection(DBMRCodeneWV2Model.SelectDateOfCat_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="selectEmpForCombox" ReturnType="Collection(DBMRCodeneWV2Model.selectEmpForCombox_Result)" />
+    <FunctionImport Name="selectLeaveEmp" ReturnType="Collection(DBMRCodeneWV2Model.selectLeaveEmp_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="selectNotPaydBycat" ReturnType="Collection(DBMRCodeneWV2Model.selectNotPaydBycat_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SelectStudentReportAccount" ReturnType="Collection(DBMRCodeneWV2Model.SelectStudentReportAccount_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Type" Mode="In" Type="Int32" />
+      <Parameter Name="ID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ShowAbcenseStude" ReturnType="Collection(DBMRCodeneWV2Model.ShowAbcenseStude_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ShowAbcenseStudeForStudent" ReturnType="Collection(DBMRCodeneWV2Model.ShowAbcenseStudeForStudent_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ShowAbcenseStudeForStudentt" ReturnType="Collection(DBMRCodeneWV2Model.ShowAbcenseStudeForStudentt_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="stuid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ShowAttendanceByCatogery" ReturnType="Collection(DBMRCodeneWV2Model.ShowAttendanceByCatogery_Result)">
+      <Parameter Name="datefrom" Mode="In" Type="DateTime" />
+      <Parameter Name="dateto" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="showcatogery" ReturnType="Collection(DBMRCodeneWV2Model.showcatogery_Result)" />
+    <FunctionImport Name="showcatogerystudent" ReturnType="Collection(DBMRCodeneWV2Model.showcatogerystudent_Result)" />
+    <FunctionImport Name="showExam" ReturnType="Collection(DBMRCodeneWV2Model.showExam_Result)" />
+    <FunctionImport Name="ShowNotAttendStude" ReturnType="Collection(DBMRCodeneWV2Model.ShowNotAttendStude_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ShowSection" ReturnType="Collection(DBMRCodeneWV2Model.ShowSection_Result)" />
+    <FunctionImport Name="showSections" ReturnType="Collection(DBMRCodeneWV2Model.showSections_Result)" />
+    <FunctionImport Name="showStages" ReturnType="Collection(DBMRCodeneWV2Model.showStages_Result)" />
+    <FunctionImport Name="ShowStudent" ReturnType="Collection(DBMRCodeneWV2Model.ShowStudent_Result)" />
+    <FunctionImport Name="showSubject" ReturnType="Collection(DBMRCodeneWV2Model.showSubject_Result)" />
+    <FunctionImport Name="UpdateCatogaryDetails">
+      <Parameter Name="day" Mode="In" Type="String" />
+      <Parameter Name="time" Mode="In" Type="String" />
+      <Parameter Name="datee" Mode="In" Type="DateTime" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateCatogaryDetailsNew">
+      <Parameter Name="day" Mode="In" Type="String" />
+      <Parameter Name="time" Mode="In" Type="String" />
+      <Parameter Name="datee" Mode="In" Type="DateTime" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Updatecatogeries">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="stageid" Mode="In" Type="Int32" />
+      <Parameter Name="sectionid" Mode="In" Type="Int32" />
+      <Parameter Name="cost" Mode="In" Type="Decimal" />
+      <Parameter Name="subid" Mode="In" Type="Int32" />
+      <Parameter Name="empid" Mode="In" Type="Int32" />
+      <Parameter Name="payedway" Mode="In" Type="Int32" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateEmpolyee">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="ssn" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="job_id" Mode="In" Type="Int32" />
+      <Parameter Name="user_id" Mode="In" Type="Int32" />
+      <Parameter Name="Empolyee_id" Mode="In" Type="Int32" />
+      <Parameter Name="salary" Mode="In" Type="Int32" />
+      <Parameter Name="user_id2" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateExam">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="high" Mode="In" Type="Decimal" />
+      <Parameter Name="low" Mode="In" Type="Decimal" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSection">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="satageid" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateStages">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateStudent">
+      <Parameter Name="satageid" Mode="In" Type="Int32" />
+      <Parameter Name="sectionid" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="school" Mode="In" Type="String" />
+      <Parameter Name="Phone1" Mode="In" Type="String" />
+      <Parameter Name="Phone2" Mode="In" Type="String" />
+      <Parameter Name="notes" Mode="In" Type="String" />
+      <Parameter Name="barcode" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+      <Parameter Name="status" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="updateStudentcat">
+      <Parameter Name="studentname" Mode="In" Type="String" />
+      <Parameter Name="catid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="updatetSubject">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="nots" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UPDATEUSER">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="pasword" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="VertifyEmpBySSNandName" ReturnType="Collection(DBMRCodeneWV2Model.VertifyEmpBySSNandName_Result)">
+      <Parameter Name="ssn" Mode="In" Type="String" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="VertifyJob" ReturnType="Collection(DBMRCodeneWV2Model.VertifyJob_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="VertifyPerUser" ReturnType="Collection(DBMRCodeneWV2Model.VertifyPerUser_Result)">
+      <Parameter Name="user_id" Mode="In" Type="Int32" />
+      <Parameter Name="page_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="VertifyUser" ReturnType="Collection(DBMRCodeneWV2Model.VertifyUser_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="AllUsers_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="UserIDD" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="AllUsersNeew_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="checkcatogery_Result">
+    <Property Type="Int32" Name="StudentCat_ID" Nullable="false" />
+    <Property Type="Int32" Name="StudentCat_StuID" Nullable="true" />
+    <Property Type="Int32" Name="StudentCat_CatID" Nullable="true" />
+    <Property Type="DateTime" Name="StudentCat_date" Nullable="true" />
+    <Property Type="Boolean" Name="StudentCat_deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="checkExam_Result">
+    <Property Type="Int32" Name="ExamResult_ID" Nullable="false" />
+    <Property Type="Int32" Name="ExamResult_StuID" Nullable="true" />
+    <Property Type="Int32" Name="ExamResult_Examid" Nullable="true" />
+    <Property Type="String" Name="ExamResult_Status" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="ExamResult_degree" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="ExamResult_date" Nullable="true" />
+    <Property Type="Boolean" Name="ExamResult_deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CheckIfExamExist_Result">
+    <Property Type="Int32" Name="Exams_ID" Nullable="false" />
+    <Property Type="String" Name="Exams_Name" Nullable="true" />
+    <Property Type="Decimal" Name="Exams_highdegree" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Exams_Lowdegree" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Exams_deleteStatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CheckIfSectionExist_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="Int32" Name="Section_StageID" Nullable="true" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+    <Property Type="Boolean" Name="Section_Deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CheckIfStageExist_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="Stage_Name" Nullable="true" />
+    <Property Type="Boolean" Name="Stage_Deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CheckIfSubjectExist_Result">
+    <Property Type="Int32" Name="Subject_ID" Nullable="false" />
+    <Property Type="String" Name="Subject_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Subject_Notes" Nullable="true" />
+    <Property Type="Boolean" Name="Subject_Deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="checkJop_Result">
+    <Property Type="Int32" Name="Employee_ID" Nullable="false" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+    <Property Type="String" Name="Employee_IPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Employee_Issn" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Employee_IAddress" Nullable="true" />
+    <Property Type="Int32" Name="Employee_IUser_ID" Nullable="true" />
+    <Property Type="Int32" Name="Employee_IJob_ID" Nullable="true" />
+    <Property Type="String" Name="Employee_salary" Nullable="true" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="true" />
+    <Property Type="Int32" Name="Employee_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="checkSection_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="Int32" Name="Student_StageID" Nullable="true" />
+    <Property Type="Int32" Name="Student_SectionID" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Address" Nullable="true" />
+    <Property Type="String" Name="Student_School" Nullable="true" />
+    <Property Type="String" Name="Student_Phone1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Phone2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Notes" Nullable="true" />
+    <Property Type="Boolean" Name="Student_DeleteStatus" Nullable="true" />
+    <Property Type="String" Name="Student_Barcode" Nullable="true" />
+    <Property Type="Int32" Name="Student_CatID" Nullable="true" />
+    <Property Type="Int32" Name="Student_Payedstatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="checkstage_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+    <Property Type="Int32" Name="Catogary_StageID" Nullable="true" />
+    <Property Type="Int32" Name="Catogary_SectionID" Nullable="true" />
+    <Property Type="Decimal" Name="Catogary_Cost" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Catogary_SubjectID" Nullable="true" />
+    <Property Type="Int32" Name="Catogary_Empid" Nullable="true" />
+    <Property Type="DateTime" Name="Catogary_DOC" Nullable="true" />
+    <Property Type="Boolean" Name="Catogary_Deletestatus" Nullable="true" />
+    <Property Type="Boolean" Name="Catogary_PayedWays" Nullable="true" />
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="Int32" Name="Student_StageID" Nullable="true" />
+    <Property Type="Int32" Name="Student_SectionID" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Address" Nullable="true" />
+    <Property Type="String" Name="Student_School" Nullable="true" />
+    <Property Type="String" Name="Student_Phone1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Phone2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Notes" Nullable="true" />
+    <Property Type="Boolean" Name="Student_DeleteStatus" Nullable="true" />
+    <Property Type="String" Name="Student_Barcode" Nullable="true" />
+    <Property Type="Int32" Name="Student_CatID" Nullable="true" />
+    <Property Type="Int32" Name="Student_Payedstatus" Nullable="true" />
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="Int32" Name="Section_StageID" Nullable="true" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+    <Property Type="Boolean" Name="Section_Deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="checkStudent_Result">
+    <Property Type="Int32" Name="StudentAttend_ID" Nullable="false" />
+    <Property Type="DateTime" Name="StudentAttend_Date" Nullable="true" />
+    <Property Type="Int32" Name="StudentAttend_StuID" Nullable="true" />
+    <Property Type="Int32" Name="StudentAttend_CatID" Nullable="true" />
+    <Property Type="String" Name="StudentAttend_Status" Nullable="true" MaxLength="50" />
+    <Property Type="Boolean" Name="StudentAttend_Deletestatus" Nullable="true" />
+    <Property Type="Int32" Name="StudentCat_ID" Nullable="false" />
+    <Property Type="Int32" Name="StudentCat_StuID" Nullable="true" />
+    <Property Type="Int32" Name="StudentCat_CatID" Nullable="true" />
+    <Property Type="DateTime" Name="StudentCat_date" Nullable="true" />
+    <Property Type="Boolean" Name="StudentCat_deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="checkSubject_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+    <Property Type="Int32" Name="Catogary_StageID" Nullable="true" />
+    <Property Type="Int32" Name="Catogary_SectionID" Nullable="true" />
+    <Property Type="Decimal" Name="Catogary_Cost" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Catogary_SubjectID" Nullable="true" />
+    <Property Type="Int32" Name="Catogary_Empid" Nullable="true" />
+    <Property Type="DateTime" Name="Catogary_DOC" Nullable="true" />
+    <Property Type="Boolean" Name="Catogary_Deletestatus" Nullable="true" />
+    <Property Type="Boolean" Name="Catogary_PayedWays" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="DisplayEmpolyees_Result">
+    <Property Type="Int32" Name="رقم_الموظف" Nullable="false" />
+    <Property Type="String" Name="اسم_الموظف" Nullable="true" />
+    <Property Type="String" Name="رقم_الهاتف" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="الرقم_القومى" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="العنوان" Nullable="true" />
+    <Property Type="String" Name="اسم_المستخدم" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="كلمة_المرور" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="الوظيفة" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="رقم_المستخدم" Nullable="true" />
+    <Property Type="String" Name="المرتب" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="DisplayJobs_Result">
+    <Property Type="Int32" Name="Job_ID" Nullable="false" />
+    <Property Type="String" Name="Job_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="powers" Nullable="true" />
+    <Property Type="Boolean" Name="Job_DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="Job_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ExamResult_Result">
+    <Property Type="Int32" Name="ExamResult_ID" Nullable="false" />
+    <Property Type="DateTime" Name="التاريخ" Nullable="true" />
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="String" Name="الاختبار" Nullable="true" />
+    <Property Type="Decimal" Name="الدرجة" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="الحالة" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetAllOperation_Result">
+    <Property Type="String" Name="النشاط" Nullable="false" />
+    <Property Type="String" Name="المستخدم" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="تاريخ_النشاط" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="GetCatbystudentid_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="getCatogaryDetailsByID_Result">
+    <Property Type="Int32" Name="CatogaryDetails_ID" Nullable="false" />
+    <Property Type="Int32" Name="CatogaryDetails_CatogeryID" Nullable="true" />
+    <Property Type="String" Name="CatogaryDetails_Day" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CatogaryDetails_Time" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CatogaryDetails_date" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetCatogeryDataForCombobox_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetCatogeryDataForComboboxbybarcode_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetCatogeryDataForComboboxs_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetEmployeeyDataForCombobox_Result">
+    <Property Type="Int32" Name="Employee_ID" Nullable="false" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetExamDataForCombobox_Result">
+    <Property Type="Int32" Name="Exams_ID" Nullable="false" />
+    <Property Type="String" Name="Exams_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetPageID_Result">
+    <Property Type="Int32" Name="Page_ID" Nullable="false" />
+    <Property Type="String" Name="PageName" Nullable="true" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="true" />
+    <Property Type="String" Name="ImageName" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getsectionbybarcode_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSectionDataBystageid_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSectionDataForCombobox_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSectionidDataForCombobox_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSpisficCatogeryDataForCombobox_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="getstagebybarcode_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="Stage_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetStagesDataForCombobox_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="Stage_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetStagesidDataForCombobox_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="Stage_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getstudentbybarcode_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getstudentbyCatid_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="getstudentbyid_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetstudentDataBycat_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetStudentFile_Result">
+    <Property Type="DateTime" Name="تاريخ_الامتحان" Nullable="true" />
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="String" Name="المجموعة" Nullable="false" />
+    <Property Type="String" Name="المادة" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="الدرجة" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="الحالة" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getstudentforcombobox_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSubjectforcombox_Result">
+    <Property Type="Int32" Name="Subject_ID" Nullable="false" />
+    <Property Type="String" Name="Subject_Name" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="GetTeacherforcombox_Result">
+    <Property Type="Int32" Name="Employee_ID" Nullable="false" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetUsers_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="IB_GetCashDataForCombobox_Result">
+    <Property Type="Int32" Name="Cash_ID" Nullable="false" />
+    <Property Type="String" Name="Cash_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MAproc_SelectAllExpenseType_Result">
+    <Property Type="Int32" Name="ExpenseType_ID" Nullable="false" />
+    <Property Type="String" Name="ExpenseType_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MAproc_SelectExpenseType_Result">
+    <Property Type="Int32" Name="ExpenseType_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المصروف" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MAproc_SelectExpenseTypeByID_Result">
+    <Property Type="Int32" Name="ExpenseType_ID" Nullable="false" />
+    <Property Type="String" Name="ExpenseType_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MAproc_SelectExpenseTypeByName_Result">
+    <Property Type="Int32" Name="ExpenseType_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المصروف" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MAproc_SeleteAllExpenses_Result">
+    <Property Type="Int32" Name="Expense_ID" Nullable="false" />
+    <Property Type="String" Name="نوع_المصروف" Nullable="true" />
+    <Property Type="DateTime" Name="التاريخ" Nullable="true" />
+    <Property Type="String" Name="المصروف" Nullable="true" />
+    <Property Type="Decimal" Name="القيمة" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="التفاصيل" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="MAproc_SeleteExpenseByID_Result">
+    <Property Type="Int32" Name="Expense_ID" Nullable="false" />
+    <Property Type="Int32" Name="Expense_ExpenseTypeID" Nullable="true" />
+    <Property Type="String" Name="ExpenseType_Name" Nullable="true" />
+    <Property Type="String" Name="Expense_Date" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="Expense_Name" Nullable="true" />
+    <Property Type="Decimal" Name="Expense_Value" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Expense_Details" Nullable="true" />
+    <Property Type="Int32" Name="Expense_CashID" Nullable="true" />
+    <Property Type="Int32" Name="Expense_BankID" Nullable="true" />
+    <Property Type="String" Name="Expense_CheckNum" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Expense_WarehouseID" Nullable="true" />
+    <Property Type="Int32" Name="Expense_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PrintbarcodeForCatogery_Result">
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Barcode" Nullable="true" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="PrintStudentForCatogery_Result">
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Barcode" Nullable="true" />
+    <Property Type="String" Name="Section_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Phone1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Phone2" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Report_Attendance_Result">
+    <Property Type="String" Name="datefrom" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="dateto" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="datee" Nullable="true" MaxLength="11" />
+    <Property Type="Time" Name="timee" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Report_AttendanceByCatogery_Result">
+    <Property Type="String" Name="datefrom" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="dateto" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="datee" Nullable="true" MaxLength="11" />
+    <Property Type="Time" Name="timee" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Report_AttendanceByStudent_Result">
+    <Property Type="String" Name="datefrom" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="dateto" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="datee" Nullable="true" MaxLength="11" />
+    <Property Type="Time" Name="timee" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ReportExpense_Result">
+    <Property Type="String" Name="ExpenseType_Name" Nullable="true" />
+    <Property Type="String" Name="Expense_Date" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="Expense_Name" Nullable="true" />
+    <Property Type="String" Name="Expense_Details" Nullable="true" />
+    <Property Type="Decimal" Name="Expense_Value" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="ReportPayeed_Result">
+    <Property Type="DateTime" Name="StudentPay_Date" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="StudentPay_PayStatus" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="StudentPay_catcost" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="StudentPay_discount" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="StudentPay_notesscost" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="StudentPay_Netvalue" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="StudentPay_Paid" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="StudentPay_Remaining" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ReportStuFile_Result">
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="DateTime" Name="تاريخ_الاختبار" Nullable="true" />
+    <Property Type="String" Name="اسم_الاختبار" Nullable="true" />
+    <Property Type="Decimal" Name="الدرجة" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="الحالة" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="RPT_ReportStuFile_Result">
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="ExamResult_date" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="Exams_Name" Nullable="true" />
+    <Property Type="Decimal" Name="ExamResult_degree" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="ExamResult_Status" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Exams_highdegree" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="Sa_CheckIfCashNameExist_Result">
+    <Property Type="Int32" Name="Cash_ID" Nullable="false" />
+    <Property Type="String" Name="Cash_Name" Nullable="true" />
+    <Property Type="Decimal" Name="Cash_CurrentValue" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Cash_AccountID" Nullable="true" />
+    <Property Type="Int32" Name="Cash_UserID" Nullable="true" />
+    <Property Type="Boolean" Name="Cash_DeleteStatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_CheckIfJobNameExist_Result">
+    <Property Type="Int32" Name="Job_ID" Nullable="false" />
+    <Property Type="String" Name="Job_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="powers" Nullable="true" />
+    <Property Type="Boolean" Name="Job_DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="Job_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_CheckIfStageExist_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="Stage_Name" Nullable="true" />
+    <Property Type="Boolean" Name="Stage_Deletestatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_CheckIfUpdateCashNameExist_Result">
+    <Property Type="Int32" Name="Cash_ID" Nullable="false" />
+    <Property Type="String" Name="Cash_Name" Nullable="true" />
+    <Property Type="Decimal" Name="Cash_CurrentValue" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="Cash_AccountID" Nullable="true" />
+    <Property Type="Int32" Name="Cash_UserID" Nullable="true" />
+    <Property Type="Boolean" Name="Cash_DeleteStatus" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_CheckIfUpdateJobExist_Result">
+    <Property Type="Int32" Name="Job_ID" Nullable="false" />
+    <Property Type="String" Name="Job_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="powers" Nullable="true" />
+    <Property Type="Boolean" Name="Job_DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="Job_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_CheckIfUpdateUserExist_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="UserIDD" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_GetCashData_Result">
+    <Property Type="Int32" Name="Cash_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الخزنة" Nullable="true" />
+    <Property Type="Decimal" Name="الرصيد_الافتتاحي" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="Sa_GetJobs_Result">
+    <Property Type="Int32" Name="Job_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الوظيفة" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sa_Login_Proc_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="UserIDD" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Sa_SearchCash_Result">
+    <Property Type="Int32" Name="Cash_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الخزنة" Nullable="true" />
+    <Property Type="Decimal" Name="الرصيد_الافتتاحي" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="Sa_SearchJob_Result">
+    <Property Type="Int32" Name="Job_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الوظيفة" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Sa_SearchUser_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المستخدم" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="كلمة_المرور" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Sa_ShowAllUsers_Result">
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المستخدم" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="كلمة_المرور" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SearchExam_Result">
+    <Property Type="Int32" Name="Exams_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الاختبار" Nullable="true" />
+    <Property Type="Decimal" Name="الدرجة_العظمي" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="الدرجة_الصغري" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="searchResult_Result">
+    <Property Type="Int32" Name="ExamResult_ID" Nullable="false" />
+    <Property Type="DateTime" Name="التاريخ" Nullable="true" />
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="String" Name="الاختبار" Nullable="true" />
+    <Property Type="Decimal" Name="الدرجة" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="الحالة" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="Searchstage_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المرحلة" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="searchStudent_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="String" Name="المرحلة" Nullable="true" />
+    <Property Type="String" Name="الصف" Nullable="true" />
+    <Property Type="String" Name="المجموعة" Nullable="true" />
+    <Property Type="String" Name="العنوان" Nullable="true" />
+    <Property Type="String" Name="تليفون_الطالب" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="تليفون_ولي_الامر" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="الملاحظات" Nullable="true" />
+    <Property Type="String" Name="المدرسة" Nullable="true" />
+    <Property Type="String" Name="الكود" Nullable="true" />
+    <Property Type="String" Name="حالة_الدفع" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="SearchSubject_Result">
+    <Property Type="Int32" Name="Subject_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المادة" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="الملاحظات" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="select_Employee_Result">
+    <Property Type="Int32" Name="Employee_ID" Nullable="false" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectAttendance_Result">
+    <Property Type="DateTime" Name="datee" Nullable="true" />
+    <Property Type="Time" Name="timee" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="selectAttendEmp_Result">
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+    <Property Type="Time" Name="time" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectcatByStuid_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="selectcatfprcombox_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SelectDateOfCat_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="DateTime" Name="CatogaryDetails_date" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectEmpForCombox_Result">
+    <Property Type="Int32" Name="Employee_ID" Nullable="false" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectLeaveEmp_Result">
+    <Property Type="DateTime" Name="Date" Nullable="true" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+    <Property Type="Time" Name="time" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="selectNotPaydBycat_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SelectStudentReportAccount_Result">
+    <Property Type="Int32" Name="RowID" Nullable="false" />
+    <Property Type="String" Name="BillDate" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="Operation" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" />
+    <Property Type="Decimal" Name="Debit" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Credit" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Balance" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="statusd" Nullable="true" />
+    <Property Type="Decimal" Name="total" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="ShowAbcenseStude_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Phone1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Phone2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="CatogaryDetails_date" Nullable="true" MaxLength="11" />
+  </ComplexType>
+  <ComplexType Name="ShowAbcenseStudeForStudent_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Student_Phone1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Student_Phone2" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="CatogaryDetails_date" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ShowAbcenseStudeForStudentt_Result">
+    <Property Type="String" Name="datefrom" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="dateto" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="datee" Nullable="true" MaxLength="11" />
+    <Property Type="Time" Name="timee" Nullable="true" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="String" Name="Catogary_Name" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ShowAttendanceByCatogery_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="DateTime" Name="datee" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="showcatogery_Result">
+    <Property Type="Int32" Name="Catogary_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الجموعة" Nullable="false" />
+    <Property Type="String" Name="المرحلة" Nullable="true" />
+    <Property Type="String" Name="الصف" Nullable="true" />
+    <Property Type="Decimal" Name="التكلفة" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="المادة" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="المدرس" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="showcatogerystudent_Result">
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="String" Name="اسم_المجموعة" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="showExam_Result">
+    <Property Type="Int32" Name="Exams_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الاختبار" Nullable="true" />
+    <Property Type="Decimal" Name="الدرجة_العظمي" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="الدرجة_الصغري" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="ShowNotAttendStude_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="Student_Name" Nullable="true" />
+    <Property Type="DateTime" Name="Column1" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ShowSection_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الصف" Nullable="true" />
+    <Property Type="String" Name="المرحلة" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="showSections_Result">
+    <Property Type="Int32" Name="Section_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الصف" Nullable="true" />
+    <Property Type="String" Name="المرحلة" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="showStages_Result">
+    <Property Type="Int32" Name="Stage_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المرحلة" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="ShowStudent_Result">
+    <Property Type="Int32" Name="Student_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_الطالب" Nullable="true" />
+    <Property Type="String" Name="المرحلة" Nullable="true" />
+    <Property Type="String" Name="الصف" Nullable="true" />
+    <Property Type="String" Name="المجموعة" Nullable="true" />
+    <Property Type="String" Name="العنوان" Nullable="true" />
+    <Property Type="String" Name="تليفون_الطالب" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="تليفون_ولي_الامر" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="الملاحظات" Nullable="true" />
+    <Property Type="String" Name="المدرسة" Nullable="true" />
+    <Property Type="String" Name="الكود" Nullable="true" />
+    <Property Type="String" Name="حالة_الدفع" Nullable="true" MaxLength="8" />
+  </ComplexType>
+  <ComplexType Name="showSubject_Result">
+    <Property Type="Int32" Name="Subject_ID" Nullable="false" />
+    <Property Type="String" Name="اسم_المادة" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="الملاحظات" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="VertifyEmpBySSNandName_Result">
+    <Property Type="Int32" Name="Employee_ID" Nullable="false" />
+    <Property Type="String" Name="Employee_Name" Nullable="true" />
+    <Property Type="String" Name="Employee_IPhone" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Employee_Issn" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Employee_IAddress" Nullable="true" />
+    <Property Type="Int32" Name="Employee_IUser_ID" Nullable="true" />
+    <Property Type="Int32" Name="Employee_IJob_ID" Nullable="true" />
+    <Property Type="String" Name="Employee_salary" Nullable="true" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="true" />
+    <Property Type="Int32" Name="Employee_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="VertifyJob_Result">
+    <Property Type="Int32" Name="Job_ID" Nullable="false" />
+    <Property Type="String" Name="Job_name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="powers" Nullable="true" />
+    <Property Type="Boolean" Name="Job_DeleteStatus" Nullable="false" />
+    <Property Type="Int32" Name="Job_UserID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="VertifyPerUser_Result">
+    <Property Type="Int32" Name="UserPage_ID" Nullable="false" />
+    <Property Type="Int32" Name="User_ID" Nullable="false" />
+    <Property Type="Int32" Name="Page_ID" Nullable="false" />
+    <Property Type="Int32" Name="UserPage_USerID" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="VertifyUser_Result">
+    <Property Type="Int32" Name="Page_ID" Nullable="false" />
+    <Property Type="String" Name="PageName" Nullable="true" />
+    <Property Type="Boolean" Name="DeleteStatus" Nullable="true" />
+    <Property Type="String" Name="ImageName" Nullable="true" />
+  </ComplexType>
+</Schema>
